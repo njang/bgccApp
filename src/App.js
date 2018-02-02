@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import logo from './TAM-Logo-white.svg';
 import './App.css';
+import Header from './components/Header';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Becky Gates Children's Center</h1>
-        </header>
+        <Header />
 
         <form>
           <label>AM Snacks</label>
@@ -64,7 +62,7 @@ class App extends Component {
           <input type="text" class="form-control"/>
         </form>
         <h2>Potty</h2>
-        <h2>Comnents</h2>
+        <h2>Commnts</h2>
       </div>
     );
   }
