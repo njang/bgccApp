@@ -13,10 +13,13 @@ Simple web app to record children's daily activities for parents and teachers to
 * As Gloria, I want to see the monthly/quarterly trend in my son's eating habits, so that I can . 
 
 ## MVP
-* Database of all the children in one class: ability to add/remove a child to/from class roster
+* Database of all the children in one classroom
+  * Displayed with the child's photo & name
+  * Add/remove a child to/from class roster
+  * Emergency button to make a call to, or otherwise alert the designated contact in case of accident/illness/etc.
 * Documentation associated with each individual child
 * Templates for different categories of observations
-  * Eat
+  * Eat (ate all, ate lots, ate some, ate none)
     * AM Snack
     * Lunch
     * PM Snack
@@ -26,7 +29,7 @@ Simple web app to record children's daily activities for parents and teachers to
     * Was active
     * Other (comments)
   * Play
-    * Favorite activity
+    * Favorite activities
     * Comments
   * Potty
     * Time
@@ -34,8 +37,13 @@ Simple web app to record children's daily activities for parents and teachers to
     * Effort
     * Supervised by
   * Incident report
+    * Date/time/location
+    * Teacher present & # of other children present
+    * Description of injury/incident
+    * What care/guidance was given?
+    * Documented by
 
 ## Stretch Goals
 * Capture photos of daily events: children playing, their artwork, etc.
-* Link to meal plan
+* Link to meal plan & assess a child's preference & potential area of improvement
 * Social media for the parents/family (limited access) 
