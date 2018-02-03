@@ -23,6 +23,16 @@ class Incident extends Component {
 			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Other staff who were present at the time of the injury/incident" />
 			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="How many children were present?" />
 			  </div>
+				<div class="form-group">
+					<label>I verify that the above information is a true and accurate account of the incident/injury that occurred concerning this child.</label>
+			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Signature of Teacher or Staff responsible for child" />
+			    <input type="date" class="form-control" id="" aria-describedby="" placeholder="Date signed" />
+					<label>I verify that the above information is a true and accurate account of the incident/injury that occurred concerning this child.</label>
+			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Signature of Director or Person in charge" />
+			    <input type="date" class="form-control" id="" aria-describedby="" placeholder="Date signed" />
+					<label>I verify that the above information is a true and accurate account of the incident/injury that occurred concerning this child.</label>
+			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Signature of Director or Person in charge" />
+			    <input type="date" class="form-control" id="" aria-describedby="" placeholder="Date signed" />			  </div>
 			</div>
     );
   }
