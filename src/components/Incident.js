@@ -7,12 +7,30 @@ class Incident extends Component {
     		<h2>Incident Report</h2>
 		    <small id="reportInstruction" class="form-text text-muted">Fill in all appropriate areas.</small>
 				<div class="form-group">
-			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Classroom Teacher" />
-			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Person completing report (if different from above)" />
-			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Child's Name" />
-			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Date/time of incident" />
-			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Classroom" />
-			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Place of Incident" />
+					<div class="row text-left">
+						<div class="col col-4"><label>Classroom Teacher</label></div>
+						<div class="col col-8"><input type="text" class="form-control" id="" aria-describedby="" placeholder="Classroom Teacher" /></div>
+					</div>
+					<div class="row text-left">
+						<div class="col col-4"><label>Report completed by</label></div>
+						<div class="col col-8"><input type="text" class="form-control" id="" aria-describedby="" placeholder="If different from above" /></div>
+					</div>
+					<div class="row text-left">
+						<div class="col col-4"><label>Child's Name</label></div>
+						<div class="col col-8"><input type="text" class="form-control" id="" aria-describedby="" placeholder="Child's Name" /></div>
+					</div>
+					<div class="row text-left">
+						<div class="col col-4"><label>Date/time of incident</label></div>
+						<div class="col col-8"><input type="datetime-local" class="form-control" id="" aria-describedby="" placeholder="Date/time of incident" /></div>
+					</div>
+					<div class="row text-left">
+						<div class="col col-4"><label>Classroom</label></div>
+						<div class="col col-8"><input type="text" class="form-control" id="" aria-describedby="" placeholder="Classroom" /></div>
+					</div>
+					<div class="row text-left">
+						<div class="col col-4"><label>Place of Incident</label></div>
+						<div class="col col-8"><input type="text" class="form-control" id="" aria-describedby="" placeholder="Place of Incident" /></div>
+			    </div>
 			  </div>
 				<div class="form-group">
 					<label> </label>
