@@ -7,9 +7,14 @@ class Incident extends Component {
     		<h2>Incident Report</h2>
 		    <small id="reportInstruction" class="form-text text-muted">Fill in all appropriate areas.</small>
 				<div class="form-group">
-			    <label for="exampleInputEmail1">Email address</label>
-			    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Classroom Teacher" />
+			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Person completing report (if different from above)" />
+			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Child's Name" />
+			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Date/time of incident" />
+			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Classroom" />
+			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Place of Incident" />
 			  </div>
+
 			</div>
     );
   }
