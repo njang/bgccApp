@@ -51,3 +51,4 @@ Simple web app to record children's daily activities for parents and teachers to
 * Social media for the parents/family (limited access) 
 * Signature/acknowledgement feature
 * Speech-to-text entry option
+* Voice memo feature
