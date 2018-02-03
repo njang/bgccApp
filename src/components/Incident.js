@@ -14,7 +14,15 @@ class Incident extends Component {
 			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Classroom" />
 			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Place of Incident" />
 			  </div>
-
+				<div class="form-group">
+					<label> </label>
+			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Describe injury (or risk in which child was involved)" />
+			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="When and how did the injury/incident occur?" />
+			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="What care/guidance was given?" />
+			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Staff who witnessed the injury/incident" />
+			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Other staff who were present at the time of the injury/incident" />
+			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="How many children were present?" />
+			  </div>
 			</div>
     );
   }
