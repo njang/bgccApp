@@ -2,22 +2,19 @@ import React, { Component } from 'react';
 import logo from './TAM-Logo-white.svg';
 import './App.css';
 import Header from './components/Header';
-import Eat from './components/Eat';
-import Rest from './components/Rest';
-import Play from './components/Play';
-import Potty from './components/Potty';
-import Incident from './components/Incident';
+import MyRoutes from './config/routes';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Header />
+        { MyRoutes}
         {/*<Eat />
         <Rest />
         <Play />
-        <Potty />*/}
-        <Incident />
+        <Potty />
+        <Incident />*/}
       </div>
     );
   }
