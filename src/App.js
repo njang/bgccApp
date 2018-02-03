@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Eat from './components/Eat';
 import Rest from './components/Rest';
 import Play from './components/Play';
+import Potty from './components/Potty';
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
         <Eat />
         <Rest />
         <Play />
+        <Potty />
       </div>
     );
   }
