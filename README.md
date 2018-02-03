@@ -48,3 +48,5 @@ Simple web app to record children's daily activities for parents and teachers to
 * Capture photos of daily events: children playing, their artwork, etc.
 * Link to meal plan & assess a child's preference & potential area of improvement
 * Social media for the parents/family (limited access) 
+* Signature/acknowledgement feature
+* Speech-to-text entry option
