@@ -1,6 +1,7 @@
 # BGCC Children's Daily Reports 
 Simple web app to record children's daily activities for parents and teachers to utilize in promoting the child's growth
 - Becky Gates Children's Center - Texas A&M University ([link](https://bgcc.tamu.edu/))
+- Demo app is deployed here ([link](https://njang.github.io/bgccApp/))
 
 ## User Persona
 1. Jackie Stewart is 51 year old teacher, currently working for the Becky Gates Children's Center of Texas A&M University. She is passionate about early childhood development and providing a nurturing and positive environment that cultivates curiosity and love of learning. 
@@ -50,3 +51,4 @@ Simple web app to record children's daily activities for parents and teachers to
 * Social media for the parents/family (limited access) 
 * Signature/acknowledgement feature
 * Speech-to-text entry option
+* Voice memo feature
