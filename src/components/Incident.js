@@ -5,7 +5,7 @@ class Incident extends Component {
     return (
     	<div className="incidentReport">
     		<h2>Incident Report</h2>
-		    <small id="reportInstruction" class="form-text text-muted">Fill in all appropriate areas.</small>
+		    <p id="reportInstruction" class="form-text text-muted">Fill in all appropriate areas.</p>
 				<div class="form-group">
 					<div class="row text-left">
 						<div class="col col-4"><label>Classroom Teacher</label></div>
@@ -68,9 +68,9 @@ class Incident extends Component {
 					<label>I verify that the above information is a true and accurate account of the incident/injury that occurred concerning this child.</label>
 			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Signature of Teacher or Staff responsible for child" />
 			    <input type="date" class="form-control" id="" aria-describedby="" placeholder="Date signed" />
-					<label>I verify that the above information is a true and accurate account of the incident/injury that occurred concerning this child.</label>
+					{/*<label>I verify that the above information is a true and accurate account of the incident/injury that occurred concerning this child.</label>
 			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Signature of Director or Person in charge" />
-			    <input type="date" class="form-control" id="" aria-describedby="" placeholder="Date signed" />
+			    <input type="date" class="form-control" id="" aria-describedby="" placeholder="Date signed" />*/}
 					{/*<label>I verify that the above information is a true and accurate account of the incident/injury that occurred concerning this child.</label>
 			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Signature of Director or Person in charge" />
 			    <input type="date" class="form-control" id="" aria-describedby="" placeholder="Date signed" />*/}
