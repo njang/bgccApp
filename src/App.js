@@ -6,6 +6,7 @@ import Eat from './components/Eat';
 import Rest from './components/Rest';
 import Play from './components/Play';
 import Potty from './components/Potty';
+import Incident from './components/Incident';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
         <Rest />
         <Play />
         <Potty />
+        <Incident />
       </div>
     );
   }
