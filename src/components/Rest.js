@@ -15,16 +15,6 @@ class Rest extends Component {
             <option value="audi">Other</option>
           </select>
         </form>
-
-        <h2>Play</h2>
-        <form>
-          <label>Favorite Activity</label>
-          <input type="text" class="form-control"/>
-          <label>Comments</label>
-          <input type="text" class="form-control"/>
-        </form>
-        <h2>Potty</h2>
-        <h2>Commnts</h2>
       </div>
     );
   }
