@@ -32,14 +32,37 @@ class Incident extends Component {
 						<div class="col col-8"><input type="text" class="form-control" id="" aria-describedby="" placeholder="Place of Incident" /></div>
 			    </div>
 			  </div>
-				<div class="form-group">
-					<label> </label>
-			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Describe injury (or risk in which child was involved)" />
-			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="When and how did the injury/incident occur?" />
-			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="What care/guidance was given?" />
-			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Staff who witnessed the injury/incident" />
-			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Other staff who were present at the time of the injury/incident" />
-			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="How many children were present?" />
+				<div class="form-group text-left">
+					<form>
+						<label for="injuryDescription">Describe injury (or risk in which child was involved)</label>
+				    <textarea class="form-control" rows="4" id="injuryDescription" aria-describedby="" placeholder="Describe injury (or risk in which child was involved)" />
+				    <hr />
+			    </form>
+			    <form>
+						<label for="whenHowInjuryOccurred">When and how did the injury/incident occur?</label>
+				    <textarea class="form-control" rows="4" id="whenHowInjuryOccurred" aria-describedby="" placeholder="When and how did the injury/incident occur?" />
+				    <hr />
+			    </form>
+			    <form>
+						<label for="careGuidanceGiven">What care/guidance was given?</label>
+				    <textarea class="form-control" rows="4" id="careGuidanceGiven" aria-describedby="" placeholder="What care/guidance was given?" />
+				    <hr />
+			    </form>
+			    <form>
+						<label for="staffWitnessed">Staff who witnessed the injury/incident</label>
+				    <textarea class="form-control" rows="4" id="staffWitnessed" aria-describedby="" placeholder="Staff who witnessed the injury/incident" />
+				    <hr />
+			    </form>
+			    <form>
+						<label for="staffPresent">Other staff who were present at the time of the injury/incident</label>
+				    <textarea class="form-control" rows="4" id="staffPresent" aria-describedby="" placeholder="Other staff who were present at the time of the injury/incident" />
+				    <hr />
+			    </form>
+			    <form>
+						<label for="childrenCount">How many children were present?</label>
+				    <textarea class="form-control" rows="4" id="childrenCount" aria-describedby="" placeholder="How many children were present?" />
+				    <hr />
+			    </form>
 			  </div>
 				<div class="form-group">
 					<label>I verify that the above information is a true and accurate account of the incident/injury that occurred concerning this child.</label>
@@ -48,9 +71,11 @@ class Incident extends Component {
 					<label>I verify that the above information is a true and accurate account of the incident/injury that occurred concerning this child.</label>
 			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Signature of Director or Person in charge" />
 			    <input type="date" class="form-control" id="" aria-describedby="" placeholder="Date signed" />
-					<label>I verify that the above information is a true and accurate account of the incident/injury that occurred concerning this child.</label>
+					{/*<label>I verify that the above information is a true and accurate account of the incident/injury that occurred concerning this child.</label>
 			    <input type="text" class="form-control" id="" aria-describedby="" placeholder="Signature of Director or Person in charge" />
-			    <input type="date" class="form-control" id="" aria-describedby="" placeholder="Date signed" />			  </div>
+			    <input type="date" class="form-control" id="" aria-describedby="" placeholder="Date signed" />*/}
+			  </div>
+			  <button class="btn btn-success">Submit</button>
 			</div>
     );
   }
