@@ -15,13 +15,22 @@ Simple web app to record children's daily activities for parents and teachers to
 * As Gloria, I want to see the monthly/quarterly trend in my son's eating habits, so that I can . 
 
 ## Wireframes
-
 ![](wireframe01.png)
 ![](wireframe02.png)
 
-## MVP
+## Entity Relationship Diagram (ERD)
+![](erd.png)
+* Initial scope: Teacher > Child > Documents
+  * Assume one teacher user, who has multiple children in his/her class. 
+  * Each child has multiple documents associated, such as what they ate, how they played & rested, potty/diaper log and incident reports.
+* Future scope: Parents, Admins
+  * Expand to multiple teachers for a child.
+  * Assign parent users to a child, as well as guardians/relatives.
+  * Enable admin users who approves & monitors certain aspects of children's center daily operations (ie. incident reports)
+
+## Minimum Viable Product (MVP)
 * Database of all the children in one classroom
-  * Displayed with the child's photo & name
+  * Displayed with the child's profile photo & name
   * Add/remove a child to/from class roster
   * Emergency button to make a call to, or otherwise alert the designated contact in case of accident/illness/etc.
 * Documentation associated with each individual child
@@ -50,6 +59,10 @@ Simple web app to record children's daily activities for parents and teachers to
     * What care/guidance was given?
     * Documented by
 
+## Technology Stacks
+* Front end: ([React.js](https://reactjs.org/)) & ([React router])(https://www.npmjs.com/package/react-router))
+* Back end: ([Node.js](https://nodejs.org/)), ([Express.js](https://expressjs.com/)), ([Mongoose](http://mongoosejs.com/))
+
 ## Stretch Goals
 * Capture photos of daily events: children playing, their artwork, etc.
 * Link to meal plan & assess a child's preference & potential area of improvement
@@ -57,10 +70,5 @@ Simple web app to record children's daily activities for parents and teachers to
 * Signature/acknowledgement feature
 * Speech-to-text entry option
 * Voice memo feature
-
-## Entity Relationship Diagram
-![](erd.png)
-* MVP: Teacher > Child > Documents
-* Future scope: Parents, Admins
 
 
