@@ -10,11 +10,11 @@ class Status extends Component {
           <div className="col col-2">
           	Sparrows
           </div>  
-          <div className="col col-8">
+          <div className="col col-7">
            	Middle
           </div>  
-          <div className="col col-1">
-   	       	Date
+          <div className="col col-2">
+   	       	<Moment format="MMM.DD" />
           </div>  
         </div>
       </header>
