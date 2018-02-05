@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
+import Moment from 'react-moment';
 import './Status.css';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import { faBars, faUser } from '@fortawesome/fontawesome-free-solid'
 
 class Status extends Component {
   render() {
@@ -15,7 +14,7 @@ class Status extends Component {
            	Middle
           </div>  
           <div className="col col-1">
-          	date
+   	       	Date
           </div>  
         </div>
       </header>

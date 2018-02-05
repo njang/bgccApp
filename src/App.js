@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './TAM-Logo-white.svg';
 import './App.css';
 import Routes from './config/routes';
 import Header from './components/Header';

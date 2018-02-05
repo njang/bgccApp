@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './Header.css';
-import logo from '../TAM-Logo-white.svg';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import { faBars, faUser } from '@fortawesome/fontawesome-free-solid'
 
@@ -14,9 +13,9 @@ class Header extends Component {
               <FontAwesomeIcon className="h3" icon={ faBars } />
             </button>
             <ul class="dropdown-menu bg-maroon text-white">
-              <li><a href="#">About</a></li>
-              <li><a href="#map">Map</a></li>
-              <li><a href="#">Weather</a></li>
+              <li><a href="/eat">Eat</a></li>
+              <li><a href="/rest">Rest</a></li>
+              <li><a href="/play">Play</a></li>
             </ul>
           </div>
           <div className="col col-9">
