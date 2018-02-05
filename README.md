@@ -14,6 +14,11 @@ Simple web app to record children's daily activities for parents and teachers to
 * As Gloria, I want to see the daily report summarizing my son's day at the school, so that
 * As Gloria, I want to see the monthly/quarterly trend in my son's eating habits, so that I can . 
 
+## Wireframes
+
+![](wireframe01.png)
+![](wireframe02.png)
+
 ## MVP
 * Database of all the children in one classroom
   * Displayed with the child's photo & name
@@ -54,7 +59,8 @@ Simple web app to record children's daily activities for parents and teachers to
 * Voice memo feature
 
 ## Entity Relationship Diagram
+![](erd.png)
 * MVP: Teacher > Child > Documents
-* Additional: Admin, Parents
+* Future scope: Parents, Admins
 
 
