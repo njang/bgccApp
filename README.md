@@ -72,4 +72,5 @@ Simple web app to record children's daily activities for parents and teachers to
 * Speech-to-text entry option
 * Voice memo feature
 
-
+## References
+* Toboggan Icon made by Freepik from ([www.flaticon.com](https://www.flaticon.com/free-icon/toboggan_501601))
