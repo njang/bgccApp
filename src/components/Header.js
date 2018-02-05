@@ -8,7 +8,7 @@ class Header extends Component {
     return (
   		<header className="App-header bg-maroon text-center">
         <div className="row"> 
-          <div className="col col-1 dropdown">
+          <div className="col col-2 dropdown">
             <button class="btn bg-maroon text-white" type="button" data-toggle="dropdown">
               <FontAwesomeIcon className="h3" icon={ faBars } />
             </button>
@@ -18,10 +18,10 @@ class Header extends Component {
               <li><a href="/play">Play</a></li>
             </ul>
           </div>
-          <div className="col col-9">
+          <div className="col col-8">
             <h1 className="App-title text-uppercase font-weight-bold">BGCC</h1>
           </div>
-          <div className="col col-1">
+          <div className="col col-2">
             <FontAwesomeIcon className="h3" icon={ faUser } />
           </div>
         </div>

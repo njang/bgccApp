@@ -10,7 +10,7 @@ class Status extends Component {
           <div className="col col-2">
           	Sparrows
           </div>  
-          <div className="col col-7">
+          <div className="col col-8">
            	Middle
           </div>  
           <div className="col col-2">
