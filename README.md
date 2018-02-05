@@ -1,3 +1,4 @@
+![](toboggan.png)
 # BGCC Children's Daily Reports 
 Simple web app to record children's daily activities for parents and teachers to utilize in promoting the child's growth
 - Becky Gates Children's Center - Texas A&M University ([link](https://bgcc.tamu.edu/))
