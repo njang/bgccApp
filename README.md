@@ -59,7 +59,8 @@ Simple web app to record children's daily activities for parents and teachers to
 * Voice memo feature
 
 ## Entity Relationship Diagram
+![](erd.png)
 * MVP: Teacher > Child > Documents
-* Additional: Admin, Parents
+* Future scope: Parents, Admins
 
 
