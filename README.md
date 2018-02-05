@@ -52,3 +52,9 @@ Simple web app to record children's daily activities for parents and teachers to
 * Signature/acknowledgement feature
 * Speech-to-text entry option
 * Voice memo feature
+
+## Entity Relationship Diagram
+* MVP: Teacher > Child > Documents
+* Additional: Admin, Parents
+
+

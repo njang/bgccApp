@@ -8,11 +8,11 @@ class Header extends Component {
   render() {
     return (
   		<header className="App-header row">
-        <h1 className="App-title col col-8 text-uppercase font-weight-bold align-middle">
+        <h1 className="App-title col col-11 text-uppercase font-weight-bold align-middle">
           <FontAwesomeIcon icon={ faBars } />
-          BGCC
+          <span> BGCC</span>
         </h1>
-        <img src={logo} className="App-logo col col-4" alt="logo" />
+        <img src={logo} className="App-logo col col-1 align-middle" alt="logo" />
 
       </header>
     );
