@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import logo from './TAM-Logo-white.svg';
 import './App.css';
 import Routes from './config/routes';
 import Header from './components/Header';
+import Status from './components/Status';
 import Students from './containers/Students'
 
 class App extends Component {
@@ -10,6 +10,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
+        <Status />
         { Routes }
         <Students />
         {/*<Eat />

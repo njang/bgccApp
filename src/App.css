@@ -1,13 +1,15 @@
 
 .App {
-  width: 50%;
-  padding: 1.0em;
+  width: 80%;
   margin: 0 auto;
+}
+
+.bg-maroon {
+  background-color: #500000;
 }
 
 @media screen and (max-width: 480px) {
     .App {
-        /*padding: 0px;*/
         width: 100%;
     }
 }
