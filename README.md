@@ -15,18 +15,22 @@ Simple web app to record children's daily activities for parents and teachers to
 * As Gloria, I want to see the monthly/quarterly trend in my son's eating habits, so that I can . 
 
 ## Wireframes
-
 ![](wireframe01.png)
 ![](wireframe02.png)
 
-## Entity Relationship Diagram
+## Entity Relationship Diagram (ERD)
 ![](erd.png)
-* MVP: Teacher > Child > Documents
+* Initial scope: Teacher > Child > Documents
+  * Assume one teacher user, who has multiple children in his/her class. 
+  * Each child has multiple documents associated, such as what they ate, how they played & rested, potty/diaper log and incident reports.
 * Future scope: Parents, Admins
+  * Expand to multiple teachers for a child.
+  * Assign parent users to a child, as well as guardians/relatives.
+  * Enable admin users who approves & monitors certain aspects of children's center daily operations (ie. incident reports)
 
-## MVP
+## Minimum Viable Product (MVP)
 * Database of all the children in one classroom
-  * Displayed with the child's photo & name
+  * Displayed with the child's profile photo & name
   * Add/remove a child to/from class roster
   * Emergency button to make a call to, or otherwise alert the designated contact in case of accident/illness/etc.
 * Documentation associated with each individual child
