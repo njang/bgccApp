@@ -1,4 +1,4 @@
-![](toboggan.png)
+![](docs/images/toboggan.png)
 # BGCC Children's Daily Reports 
 Simple web app to record children's daily activities for parents and teachers to utilize in promoting the child's growth
 - Becky Gates Children's Center - Texas A&M University ([link](https://bgcc.tamu.edu/))
@@ -16,11 +16,11 @@ Simple web app to record children's daily activities for parents and teachers to
 * As Gloria, I want to see the monthly/quarterly trend in my son's eating habits, so that I can . 
 
 ## Wireframes
-![](wireframe01.png)
-![](wireframe02.png)
+![](docs/images/wireframe01.png)
+![](docs/images/wireframe02.png)
 
 ## Entity Relationship Diagram (ERD)
-![](erd.png)
+![](docs/images/erd.png)
 * Initial scope: Teacher > Child > Documents
   * Assume one teacher user, who has multiple children in his/her class. 
   * Each child has multiple documents associated, such as what they ate, how they played & rested, potty/diaper log and incident reports.
