@@ -61,7 +61,7 @@ Simple web app to record children's daily activities for parents and teachers to
     * Documented by
 
 ## Technology Stacks
-* Front end: ([React.js](https://reactjs.org/)) & ([React router])(https://www.npmjs.com/package/react-router))
+* Front end: ([React.js](https://reactjs.org/)) & ([React router](https://www.npmjs.com/package/react-router))
 * Back end: ([Node.js](https://nodejs.org/)), ([Express.js](https://expressjs.com/)), ([Mongoose](http://mongoosejs.com/))
 
 ## Stretch Goals
