@@ -3,16 +3,17 @@ import Child from './Child'
 
 class Children extends Component {
   render(){
-    let children = this.props.todos.map( (todo) => {
+    let children = this.props.children.map( (child) => {
       return (
         <Child
-          key={todo._id}
-          todo={todo}/>
+          key = { child._id }
+          child = { child }
+        />
       )
     })
     return(
-      <div className="todos">
-        {children}
+      <div className="children">
+        { children }
       </div>
     )
   }

@@ -6,7 +6,7 @@ class ChildrenList extends Component {
   constructor(){
     super()
     this.state = {
-      todos: []
+      children: []
     }
   }
   componentDidMount(){
@@ -15,16 +15,16 @@ class ChildrenList extends Component {
   fetchData(){
     ChildModel.all().then( (res) => {
       this.setState ({
-        todos: res.data.todos,
-        todo: ''
+        children: res.data.children,
+        child: ''
       })
     })
   }
   render(){
     return (
-      <div className="todosComponent">
+      <div className="childrenList">
         <Children
-          todos={this.state.todos} />
+          children={this.state.children} />
       </div>
     )
   }
