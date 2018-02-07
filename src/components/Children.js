@@ -8,6 +8,7 @@ class Children extends Component {
         <Child
           key = { child._id }
           child = { child }
+          onRemoveChild = { this.props.onRemoveChild }
         />
       )
     })

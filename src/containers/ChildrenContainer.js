@@ -10,6 +10,7 @@ class ChildrenList extends Component {
       children: []
     }
     this.addChild = this.addChild.bind(this);
+    this.removeChild = this.removeChild.bind(this);
   }
 
   addChild(child) {
@@ -23,6 +24,15 @@ class ChildrenList extends Component {
     })
   }
   
+  removeChild(child) {
+    ChildModel.delete(child).then((res) => {
+        let children = this.state.children.filter(function(child) {
+          return child._id !== res.data._id
+        });
+        this.setState({children})
+    })
+  }
+
   componentDidMount(){
     this.fetchData()
   }
@@ -40,7 +50,8 @@ class ChildrenList extends Component {
     return (
       <div className="childrenList">
         <Children
-          children={this.state.children} />
+          children = { this.state.children } 
+          onRemoveChild = { this.removeChild }/>
         <AddChildForm
           addChild={ this.addChild } />  
       </div>
