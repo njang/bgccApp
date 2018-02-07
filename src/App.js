@@ -11,13 +11,8 @@ class App extends Component {
       <div className="App">
         <Header />
         <Status />
-        { Routes }
+        {/* Routes */}
         <ChildrenList />
-        {/*<Eat />
-        <Rest />
-        <Play />
-        <Potty />
-        <Incident />*/}
       </div>
     );
   }
