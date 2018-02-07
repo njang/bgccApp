@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-class EditChidForm extends Component {
+class EditChildForm extends Component {
   constructor() {
     super();
     this.onChange = this.onChange.bind(this);
@@ -38,4 +38,4 @@ class EditChidForm extends Component {
   }
 }
 
-export default EditChidForm
+export default EditChildForm

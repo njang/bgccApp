@@ -53,7 +53,8 @@ class AddChildForm extends Component {
               type='text'
               onChange={ this.onInputChange }
               placeholder="Add child's name"
-              value={ this.state.name } />
+              value={ this.state.name } 
+              required />
           </label>
           <br />
           <label>
@@ -62,7 +63,8 @@ class AddChildForm extends Component {
               name="dob"
               type="text"
               value={this.state.dob}
-              onChange={ this.onInputChange } />
+              onChange={ this.onInputChange } 
+              required />
           </label>
           <br />
           <label>
@@ -71,7 +73,8 @@ class AddChildForm extends Component {
               name="emergencyContact"
               type="text"
               value={ this.state.emergencyContact }
-              onChange={ this.onInputChange } />
+              onChange={ this.onInputChange } 
+              required />
           </label>
           <br />
           <button type='submit'>Add</button>

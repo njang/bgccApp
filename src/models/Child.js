@@ -9,8 +9,8 @@ class ChildModel extends Component {
 	  return request;
 	}
 
-	static update(todoId, todoBody) {
-    let request = axios.put(`${url}/${child._id}`, { body: todoBody })
+	static update(childId, childBody) {
+    let request = axios.put(`${url}/${childId}`, { body: childBody })
     return request
 	}
 

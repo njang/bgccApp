@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import EditChildForm from './EditChild'
 
 class Child extends Component {
   constructor() {
@@ -22,7 +23,8 @@ class Child extends Component {
         <span className="col col-3">{this.props.child.dob}</span>
         <span className="col col-3">{this.props.child.emergencyContact}</span>
         <button className="col col-2" onClick={ this.editClickedChild }>{this.props.child.name}</button>
-        { this.props.editingChildId === this.props.child._id ? `${this.props.child.name} is being edited` : '' }
+        {/* this.props.editingChildId === this.props.child._id ? `${this.props.child.name} is being edited` : '' */}
+        { this.props.editingChildId === this.props.child._id ? <EditChildForm autoFocus={true} onEditChild={this.props.onEditChild} buttonName="Update child!"/> : '' }
         <button className='col col-1 deleteButton' onClick={this.removeClickedChild}>(X)</button>
       </div>
     )
