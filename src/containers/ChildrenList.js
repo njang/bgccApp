@@ -15,7 +15,7 @@ class ChildrenList extends Component {
   fetchData(){
     ChildModel.all().then( (res) => {
       this.setState ({
-        children: res.data.children,
+        children: res.data,
         child: ''
       })
     })
