@@ -7,9 +7,13 @@ class ChildrenList extends Component {
   constructor(){
     super()
     this.state = {
-      children: []
+      children: [],
+      editingChildId: null,
+      editing: false
     }
     this.addChild = this.addChild.bind(this);
+    this.editChild = this.editChild.bind(this);
+    this.updateChild = this.updateChild.bind(this);
     this.removeChild = this.removeChild.bind(this);
   }
 
@@ -24,6 +28,29 @@ class ChildrenList extends Component {
     })
   }
   
+  editChild(child){
+    this.setState({
+      editingChildId: child._id,
+      editing: true
+    })
+  }
+
+  updateChild(childBody) {
+    let childId = this.state.editingchildId
+    function isUpdatedChild(child) {
+        return child._id === childId;
+    }
+    ChildModel.update(childId, childBody).then((res) => {
+        let children = this.state.children
+        children.find(isUpdatedChild).body = childBody
+        this.setState({
+          children: children, 
+          editingChildId: null, 
+          editing: false
+        })
+    })
+  }
+
   removeChild(child) {
     ChildModel.delete(child).then((res) => {
         let children = this.state.children.filter(function(child) {
@@ -51,6 +78,12 @@ class ChildrenList extends Component {
       <div className="childrenList">
         <Children
           children = { this.state.children } 
+
+          editingChildId={this.state.editingChildId}
+          onEditChild={this.editChild}
+          onDeleteChild={this.deleteChild} 
+          onUpdateChild={this.updateChild}
+          
           onRemoveChild = { this.removeChild }/>
         <AddChildForm
           addChild={ this.addChild } />  
