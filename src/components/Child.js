@@ -25,26 +25,29 @@ class Child extends Component {
   render(){
     let index = Math.round(Math.random()*11);
     return(
-      <div className="col-sm-12 col-md-6 col-lg-4 childCard" data-child-index={this.props.child._id}>
-        <img className="avatar" src={ iconsArray[this.props.child.icon] } />
-        <span className="nameDisplay" >{this.props.child.name.first}</span>
-        
-        {/*<div className="col col-3">{this.props.child.name}</div>
-        <span className="col col-3">{this.props.child.dob}</span>
-        <span className="col col-3">{this.props.child.emergencyContact}</span>
-        <button className="col col-2" onClick={ this.editClickedChild }>Edit</button>
-        { this.props.editingChildId === this.props.child._id ? 
-          <EditChildForm 
-            autoFocus = { true } 
-            onEditChild = { this.props.onEditChild }
-            onUpdateChild = { this.props.onUpdateChild }
-            id = { this.props.child._id }
-            fillName = { this.props.child.name }
-            fillDOB = { this.props.child.dob } 
-            fillEmergencyContact = { this.props.child.emergencyContact }
-          /> : '' 
-        }
-        <button className='col col-1 deleteButton' onClick={this.removeClickedChild}>(X)</button>*/}
+      <div className="col-sm-12 col-md-6 col-lg-4 childCardOuter" data-child-index={this.props.child._id}>
+        <div className="childCardInner">
+            
+          <img className="avatar" src={ iconsArray[this.props.child.icon] } />
+          <span className="nameDisplay" >{ this.props.child.name.first }</span>
+          
+          {/*<div className="col col-3">{this.props.child.name}</div>
+          <span className="col col-3">{this.props.child.dob}</span>
+          <span className="col col-3">{this.props.child.emergencyContact}</span>
+          <button className="col col-2" onClick={ this.editClickedChild }>Edit</button>
+          { this.props.editingChildId === this.props.child._id ? 
+            <EditChildForm 
+              autoFocus = { true } 
+              onEditChild = { this.props.onEditChild }
+              onUpdateChild = { this.props.onUpdateChild }
+              id = { this.props.child._id }
+              fillName = { this.props.child.name }
+              fillDOB = { this.props.child.dob } 
+              fillEmergencyContact = { this.props.child.emergencyContact }
+            /> : '' 
+          }
+          <button className='col col-1 deleteButton' onClick={this.removeClickedChild}>(X)</button>*/}
+        </div>
       </div>
     )
   }

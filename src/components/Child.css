@@ -1,17 +1,22 @@
-.childCard {
+.childCardOuter {
 	padding: 0.5em;
+}
+.childCardInner {
+	padding: 0.5em;
+	background: navy;
+	border-color: silver;
+	border-style: solid;
+	border-radius: 48px;
 }
 
 .avatar {
-	height: 96px;
-	width: 96px;
-	border-color: black;
+	width: 40%;
+/*	border-color: black;
 	border-style: solid;
-	border-radius: 50%;
+	border-radius: 50%;*/
 }
 .nameDisplay {
 	font-size: 24px;
-	background: navy;
 	color: white;
 	text-transform: uppercase;
 	border-radius: 0 10px 10px 0;
