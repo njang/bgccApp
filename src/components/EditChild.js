@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import ChildModel from '../models/Child'
 
 class EditChildForm extends Component {
   constructor() {
@@ -8,10 +9,19 @@ class EditChildForm extends Component {
   }
 
   onChange(event) {
+  //   this.setState({
+  //     child: event.target.value
+  //   })
+  // }
+  // onInputChange(event){
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+
     this.setState({
-      child: event.target.value
+      [name]: value
     })
-  }
+  }  
   
   onSubmit(event){
     event.preventDefault()
@@ -21,17 +31,31 @@ class EditChildForm extends Component {
       child: ""
     })
   }
+
   render(){
     return (
       <div className='editChildForm'>
         <form onSubmit={ this.onSubmit }>
           <input
-            autoFocus={this.props.autoFocus}
+          	name='name'
+            autoFocus={ this.props.autoFocus }
             onChange={ this.onChange }
-            placeholder='Write a todo here ...'
+            placeholder={ this.props.fillName }
             type='text'
             value={(this.state && this.state.child) || ''} />
-          <button type='submit'>{this.props.buttonName}</button>
+          <input
+          	name='dob'
+            onChange={ this.onChange }
+            placeholder={ this.props.fillDOB }
+            type='text'
+            value={(this.state && this.state.child) || ''} />
+          <input
+          	name='emergencyContact'
+            onChange={ this.onChange }
+            placeholder={ this.props.fillEmergencyContact }
+            type='text'
+            value={(this.state && this.state.child) || ''} />
+          <button type='submit'>{ this.props.buttonName }</button>
         </form>
       </div>
     )
