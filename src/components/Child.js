@@ -27,6 +27,7 @@ class Child extends Component {
           <EditChildForm 
             autoFocus={true} 
             onEditChild={this.props.onEditChild}
+            onUpdateChild={ this.props.onUpdateChild }
             fillName={this.props.child.name} 
             fillDOB={this.props.child.dob} 
             fillEmergencyContact={this.props.child.emergencyContact}             

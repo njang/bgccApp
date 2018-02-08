@@ -8,9 +8,9 @@ class Children extends Component {
         <Child
           key = { child._id }
           child = { child }
-          editingChildId={this.props.editingChildId}
-          onEditChild={this.props.onEditChild}
-          onUpdateChild={this.props.onUpdateChild}
+          editingChildId={ this.props.editingChildId }
+          onEditChild={ this.props.onEditChild }
+          onUpdateChild={ this.props.onUpdateChild }
           onRemoveChild = { this.props.onRemoveChild }
         />
       )

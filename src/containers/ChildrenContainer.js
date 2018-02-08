@@ -36,18 +36,25 @@ class ChildrenList extends Component {
   }
 
   updateChild(childBody) {
-    let childId = this.state.editingchildId
+    // let childId = this.state.editingchildId
+    let childId = childBody.id
+    // let updatedChildBody = {
+    //   name: childBody.name,
+    //   dob: childBody.dob,
+    //   emergencyContact: childBody.emergencyContact
+    // }
     function isUpdatedChild(child) {
-        return child._id === childId;
+      return child._id === childId;
     }
+    let self = this
     ChildModel.update(childId, childBody).then((res) => {
-        let children = this.state.children
-        children.find(isUpdatedChild).body = childBody
-        this.setState({
-          children: children, 
-          editingChildId: null, 
-          editing: false
-        })
+      let children = self.state.children
+      children.find(isUpdatedChild).body = childBody
+      self.setState({
+        children: children, 
+        editingChildId: null, 
+        editing: false
+      })
     })
   }
 
@@ -79,10 +86,10 @@ class ChildrenList extends Component {
         <Children
           children = { this.state.children } 
 
-          editingChildId={this.state.editingChildId}
-          onEditChild={this.editChild}
-          onDeleteChild={this.deleteChild} 
-          onUpdateChild={this.updateChild}
+          editingChildId = { this.state.editingChildId }
+          onEditChild = { this.editChild }
+          onDeleteChild = { this.deleteChild } 
+          onUpdateChild = { this.updateChild }
           
           onRemoveChild = { this.removeChild }/>
         <AddChildForm
