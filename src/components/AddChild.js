@@ -40,7 +40,7 @@ class AddChildForm extends Component {
     }
 
     ChildModel.create(childObject).then((res) => {
-      self.setState({
+      this.setState({
         name: '',
         dob: '',
         emergencyContact: ''

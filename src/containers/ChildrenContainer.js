@@ -3,7 +3,7 @@ import ChildModel from '../models/Child'
 import Children from '../components/Children'
 import AddChildForm from '../components/AddChild'
 
-class ChildrenList extends Component {
+class ChildrenContainer extends Component {
   constructor(){
     super()
     this.state = {
@@ -93,4 +93,4 @@ class ChildrenList extends Component {
   }
 }
 
-export default ChildrenList;
+export default ChildrenContainer;

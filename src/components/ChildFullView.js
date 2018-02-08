@@ -1,13 +1,13 @@
 import React, {Component} from 'react'
 import './Child.css';
 import EditChildForm from './EditChild'
-// import Icons from '../icons/001-deer.png'
+import {Link} from 'react-router-dom';
 
 const icons = require.context('../icons', true, /\.png$/)
 const keys = icons.keys()
 const iconsArray = keys.map(key => icons(key))
 
-class Child extends Component {
+class ChildFullView extends Component {
   constructor() {
     super();
     this.removeClickedChild = this.removeClickedChild.bind(this);
@@ -23,13 +23,10 @@ class Child extends Component {
   }
 
   render(){
-    let index = Math.round(Math.random()*11);
     return(
-      <div className="col-sm-12 col-md-6 col-lg-4 childCardOuter" data-child-index={this.props.child._id}>
+      <div className="col-sm-12 col-md-6 col-lg-4 childCardOuter">
         <div className="childCardInner">
-            
-          <img className="avatar" src={ iconsArray[this.props.child.icon] } />
-          <span className="nameDisplay" >{ this.props.child.name.first }</span>
+          <span className="nameDisplay" >{ this.props.name }</span>
           
           {/*<div className="col col-3">{this.props.child.name}</div>
           <span className="col col-3">{this.props.child.dob}</span>
@@ -53,4 +50,4 @@ class Child extends Component {
   }
 }
 
-export default Child
+export default ChildFullView
