@@ -7,13 +7,10 @@ class Status extends Component {
     return (
   		<header className="Status bg-secondary text-white text-center">
         <div className="row"> 
-          <div className="col col-2">
+          <div className="col col-2 offset-1">
           	Sparrows
           </div>  
-          <div className="col col-8">
-           	Middle
-          </div>  
-          <div className="col col-2">
+          <div className="col col-2 offset-6">
    	       	<Moment format="(ddd) MMM.DD" />
           </div>  
         </div>
