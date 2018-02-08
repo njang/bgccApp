@@ -14,11 +14,6 @@ class EditChildForm extends Component {
   }
 
   onChange(event) {
-  //   this.setState({
-  //     child: event.target.value
-  //   })
-  // }
-  // onInputChange(event){
     const value = event.target.value;
     const name = event.target.name;
     this.setState({
@@ -31,9 +26,10 @@ class EditChildForm extends Component {
     let self = this
     let childObject = {
       id: self.props.id,
-      name: self.state.name,
-      dob: self.state.dob,
-      emergencyContact: self.state.emergencyContact,
+      // If the field is left unfilled, use the values passed from Child component
+      name: self.state.name ? self.state.name : self.props.fillName,
+      dob: self.state.dob? self.state.dob : self.props.fillDOB,
+      emergencyContact: self.state.emergencyContact ? self.state.emergencyContact : self.props.fillEmergencyContact,
       type: 'child'
     }
     this.props.onUpdateChild(childObject);
@@ -49,26 +45,23 @@ class EditChildForm extends Component {
       <div className='editChildForm'>
         <form onSubmit={ this.onSubmit }>
           <input
-          	name='name'
-            autoFocus={ this.props.autoFocus }
-            onChange={ this.onChange }
-            placeholder={ this.props.fillName }
-            type='text'
-            value={(this.state && this.state.name) || ''}
+          	name = 'name'
+            type = 'text'
+            autoFocus = { this.props.autoFocus }
+            onChange = { this.onChange }
+            placeholder = { this.props.fillName }
           />
           <input
-          	name='dob'
-            onChange={ this.onChange }
-            placeholder={ this.props.fillDOB }
-            type='text'
-            value={(this.state && this.state.dob) || ''}
+            name = 'dob'
+            type ='text'
+            onChange = { this.onChange }
+            placeholder = { this.props.fillDOB }
           />
           <input
-          	name='emergencyContact'
-            onChange={ this.onChange }
-            placeholder={ this.props.fillEmergencyContact }
-            type='text'
-            value={(this.state && this.state.emergencyContact) || ''}
+          	name = 'emergencyContact'
+            type = 'text'
+            onChange = { this.onChange }
+            placeholder = { this.props.fillEmergencyContact }
           />
           <button type='submit'>{ this.props.buttonName }</button>
         </form>

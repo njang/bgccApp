@@ -22,7 +22,7 @@ class Child extends Component {
         <span className="col col-3">{this.props.child.name}</span>
         <span className="col col-3">{this.props.child.dob}</span>
         <span className="col col-3">{this.props.child.emergencyContact}</span>
-        <button className="col col-2" onClick={ this.editClickedChild }>{this.props.child.name}</button>
+        <button className="col col-2" onClick={ this.editClickedChild }>Edit</button>
         { this.props.editingChildId === this.props.child._id ? 
           <EditChildForm 
             autoFocus = { true } 

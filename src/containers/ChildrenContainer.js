@@ -36,20 +36,14 @@ class ChildrenList extends Component {
   }
 
   updateChild(childBody) {
-    // let childId = this.state.editingchildId
     let childId = childBody.id
-    let updatedChildBody = {
-      name: childBody.name,
-      dob: childBody.dob,
-      emergencyContact: childBody.emergencyContact
-    }
     function isUpdatedChild(child) {
       return child._id === childId;
     }
     let self = this
-    ChildModel.update(childId, updatedChildBody).then((res) => {
+    ChildModel.update(childId, childBody).then((res) => {
       let children = self.state.children
-      children.find(isUpdatedChild).body = updatedChildBody
+      children.find(isUpdatedChild).body = childBody
       self.setState({
         children: children, 
         editingChildId: null, 
