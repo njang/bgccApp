@@ -26,10 +26,16 @@ class AddChildForm extends Component {
   onFormSubmit(event){
     event.preventDefault()
     let self = this
+    let nameFirst = self.state.name.split(' ')[0]
+    let nameLast = self.state.name.split(' ')[1]
     let childObject = {
-      name: self.state.name,
+      name: {
+        first: nameFirst,
+        last: nameLast
+      },
       dob: self.state.dob,
       emergencyContact: self.state.emergencyContact,
+      icon: Math.round(Math.random()*11),
       type: 'child'
     }
 

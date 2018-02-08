@@ -1,5 +1,11 @@
 import React, {Component} from 'react'
+import './Child.css';
 import EditChildForm from './EditChild'
+// import Icons from '../icons/001-deer.png'
+
+const icons = require.context('../icons', true, /\.png$/)
+const keys = icons.keys()
+const iconsArray = keys.map(key => icons(key))
 
 class Child extends Component {
   constructor() {
@@ -17,9 +23,12 @@ class Child extends Component {
   }
 
   render(){
+    let index = Math.round(Math.random()*11);
     return(
-      <div className="col-xs-12 col-sm-6 col-md-3 col-xl-2" data-child-index={this.props.child._id}>
-        {this.props.child.name}
+      <div className="col-sm-12 col-md-6 col-lg-4 childCard" data-child-index={this.props.child._id}>
+        <img className="avatar" src={ iconsArray[this.props.child.icon] } />
+        <span className="nameDisplay" >{this.props.child.name.first}</span>
+        
         {/*<div className="col col-3">{this.props.child.name}</div>
         <span className="col col-3">{this.props.child.dob}</span>
         <span className="col col-3">{this.props.child.emergencyContact}</span>

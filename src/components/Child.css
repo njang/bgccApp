@@ -1,0 +1,19 @@
+.childCard {
+	padding: 0.5em;
+}
+
+.avatar {
+	height: 96px;
+	width: 96px;
+	border-color: black;
+	border-style: solid;
+	border-radius: 50%;
+}
+.nameDisplay {
+	font-size: 24px;
+	background: navy;
+	color: white;
+	text-transform: uppercase;
+	border-radius: 0 10px 10px 0;
+	padding: 10px;
+}
