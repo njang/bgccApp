@@ -16,7 +16,7 @@ class Children extends Component {
       )
     })
     return(
-      <div className="children">
+      <div className="children row">
         { children }
       </div>
     )

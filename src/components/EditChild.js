@@ -33,6 +33,7 @@ class EditChildForm extends Component {
       type: 'child'
     }
     this.props.onUpdateChild(childObject);
+    this.forceUpdate();
     self.setState({
       name: '',
       dob: '',
@@ -49,21 +50,21 @@ class EditChildForm extends Component {
             type = 'text'
             autoFocus = { this.props.autoFocus }
             onChange = { this.onChange }
-            placeholder = { this.props.fillName }
+            defaultValue = { this.props.fillName }
           />
           <input
             name = 'dob'
             type ='text'
             onChange = { this.onChange }
-            placeholder = { this.props.fillDOB }
+            defaultValue = { this.props.fillDOB }
           />
           <input
           	name = 'emergencyContact'
             type = 'text'
             onChange = { this.onChange }
-            placeholder = { this.props.fillEmergencyContact }
+            defaultValue = { this.props.fillEmergencyContact }
           />
-          <button type='submit'>{ this.props.buttonName }</button>
+          <button type='submit'>Update</button>
         </form>
       </div>
     )

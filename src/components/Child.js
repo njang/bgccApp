@@ -18,8 +18,9 @@ class Child extends Component {
 
   render(){
     return(
-      <div className="row" data-child-index={this.props.child._id}>
-        <span className="col col-3">{this.props.child.name}</span>
+      <div className="col-xs-12 col-sm-6 col-md-3 col-xl-2" data-child-index={this.props.child._id}>
+        {this.props.child.name}
+        {/*<div className="col col-3">{this.props.child.name}</div>
         <span className="col col-3">{this.props.child.dob}</span>
         <span className="col col-3">{this.props.child.emergencyContact}</span>
         <button className="col col-2" onClick={ this.editClickedChild }>Edit</button>
@@ -32,10 +33,9 @@ class Child extends Component {
             fillName = { this.props.child.name }
             fillDOB = { this.props.child.dob } 
             fillEmergencyContact = { this.props.child.emergencyContact }
-            buttonName = "Update"
           /> : '' 
         }
-        <button className='col col-1 deleteButton' onClick={this.removeClickedChild}>(X)</button>
+        <button className='col col-1 deleteButton' onClick={this.removeClickedChild}>(X)</button>*/}
       </div>
     )
   }
