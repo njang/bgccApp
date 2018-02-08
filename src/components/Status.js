@@ -14,7 +14,7 @@ class Status extends Component {
            	Middle
           </div>  
           <div className="col col-2">
-   	       	<Moment format="MMM.DD" />
+   	       	<Moment format="(ddd) MMM.DD" />
           </div>  
         </div>
       </header>
