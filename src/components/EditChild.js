@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import ChildModel from '../models/Child'
+// import ChildModel from '../models/Child'
 
 class EditChildForm extends Component {
   constructor() {
@@ -30,7 +30,7 @@ class EditChildForm extends Component {
     event.preventDefault()
     let self = this
     let childObject = {
-      id: self.state.id,
+      id: self.props.id,
       name: self.state.name,
       dob: self.state.dob,
       emergencyContact: self.state.emergencyContact,

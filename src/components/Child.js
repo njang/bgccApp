@@ -25,13 +25,14 @@ class Child extends Component {
         <button className="col col-2" onClick={ this.editClickedChild }>{this.props.child.name}</button>
         { this.props.editingChildId === this.props.child._id ? 
           <EditChildForm 
-            autoFocus={true} 
-            onEditChild={this.props.onEditChild}
-            onUpdateChild={ this.props.onUpdateChild }
-            fillName={this.props.child.name} 
-            fillDOB={this.props.child.dob} 
-            fillEmergencyContact={this.props.child.emergencyContact}             
-            buttonName="Update"
+            autoFocus = { true } 
+            onEditChild = { this.props.onEditChild }
+            onUpdateChild = { this.props.onUpdateChild }
+            id = { this.props.child._id }
+            fillName = { this.props.child.name }
+            fillDOB = { this.props.child.dob } 
+            fillEmergencyContact = { this.props.child.emergencyContact }
+            buttonName = "Update"
           /> : '' 
         }
         <button className='col col-1 deleteButton' onClick={this.removeClickedChild}>(X)</button>

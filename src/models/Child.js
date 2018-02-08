@@ -12,8 +12,8 @@ class ChildModel extends Component {
 	static update(childId, childBody) {
 		console.log(childId);
 		console.log(childBody);
-    // let request = axios.put(`${url}/${childId}`, { body: childBody })
-    // return request
+    let request = axios.put(`${url}/${childId}`, { body: childBody })
+    return request
 	}
 
 	static delete(child){
