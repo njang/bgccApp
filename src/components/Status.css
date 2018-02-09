@@ -2,3 +2,7 @@
 	font-size: 16px;
 	padding: 0.5em;
 }
+a, a:hover, a:visited, a:link, a:active {
+	text-decoration: none;
+	text-transform: uppercase;
+}
