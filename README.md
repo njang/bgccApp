@@ -74,3 +74,4 @@ Simple web app to record children's daily activities for parents and teachers to
 
 ## References
 * Toboggan Icon made by Freepik from ([www.flaticon.com](https://www.flaticon.com/free-icon/toboggan_501601))
+* Flaticons Wildlife-14 pack ([link](https://www.flaticon.com/packs/wildlife-14))

@@ -1,20 +1,19 @@
 import React, { Component } from 'react';
 import Moment from 'react-moment';
 import './Status.css';
+import {Link} from 'react-router-dom';
+
 
 class Status extends Component {
   render() {
     return (
   		<header className="Status bg-secondary text-white text-center">
         <div className="row"> 
-          <div className="col col-2">
-          	Sparrows
+          <div className="col col-2 offset-1">
+          	<Link to={'/'}>Sparrows</Link>
           </div>  
-          <div className="col col-8">
-           	Middle
-          </div>  
-          <div className="col col-2">
-   	       	<Moment format="MMM.DD" />
+          <div className="col col-2 offset-6">
+   	       	<Moment format="(ddd) MMM.DD" />
           </div>  
         </div>
       </header>

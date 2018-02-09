@@ -26,15 +26,21 @@ class AddChildForm extends Component {
   onFormSubmit(event){
     event.preventDefault()
     let self = this
+    let nameFirst = self.state.name.split(' ')[0]
+    let nameLast = self.state.name.split(' ')[1]
     let childObject = {
-      name: self.state.name,
+      name: {
+        first: nameFirst,
+        last: nameLast
+      },
       dob: self.state.dob,
       emergencyContact: self.state.emergencyContact,
+      icon: Math.round(Math.random()*11),
       type: 'child'
     }
 
     ChildModel.create(childObject).then((res) => {
-      self.setState({
+      this.setState({
         name: '',
         dob: '',
         emergencyContact: ''
@@ -43,38 +49,44 @@ class AddChildForm extends Component {
   }
   render(){
     return (
-      <div>
-        <h2>Add child to classroom</h2>
+       <div>
+        <h2 className='text-center'>Add a child to classroom</h2>
         <form onSubmit={ this.onFormSubmit }>
-          <label>
-            Name
-            <input
+          <div className='row'>
+            <label className='col-2 offset-3'>
+              Name
+            </label>
+            <input className='col-4'
               name='name'
               type='text'
               onChange={ this.onInputChange }
               placeholder="Add child's name"
-              value={ this.state.name } />
-          </label>
-          <br />
-          <label>
-            Date of birth:
-            <input
+              value={ this.state.name } 
+              required />
+          </div>
+          <div className='row'>
+            <label className='col-2 offset-3'>
+              Date of birth
+            </label>
+            <input className='col-4'
               name="dob"
               type="text"
               value={this.state.dob}
-              onChange={ this.onInputChange } />
-          </label>
-          <br />
-          <label>
-            Emergency contact:
-            <input
+              onChange={ this.onInputChange } 
+              required />
+          </div>
+          <div className='row'>
+            <label className='col-2 offset-3'>
+              Emergency contact
+            </label>
+            <input className='col-4'
               name="emergencyContact"
               type="text"
               value={ this.state.emergencyContact }
-              onChange={ this.onInputChange } />
-          </label>
-          <br />
-          <button type='submit'>Add</button>
+              onChange={ this.onInputChange } 
+              required />
+          </div>
+          <button className='text-center' type='submit'>Add</button>
         </form>
       </div>
     )

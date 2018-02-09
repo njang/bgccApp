@@ -1,0 +1,42 @@
+.childCardOuter {
+	padding: 0.5em;
+}
+.childCardInner {
+	padding: 0.5em;
+	background: navy;
+	border-color: silver;
+	border-style: solid;
+	border-radius: 48px;
+}
+
+.avatar {
+	width: 96px;
+	height: 96px;
+	font-size: 96px;
+/*	border-color: black;
+	border-style: solid;
+	border-radius: 50%;*/
+}
+.nameDisplay {
+	font-size: 24px;
+	color: white;
+	text-transform: uppercase;
+	border-radius: 0 10px 10px 0;
+	padding: 10px;
+}
+.nameDisplayFull {
+	font-size: 24px;
+	color: white;
+	border-radius: 0 10px 10px 0;
+	padding: 10px;
+}
+
+.emergencyCallButton {
+	font-size: 24px;
+	text-align: center;
+	vertical-align: middle;
+	border-style: solid;
+	border-radius: 64px;
+	background: red;
+	color: white;
+}

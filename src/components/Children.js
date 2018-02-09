@@ -1,19 +1,22 @@
 import React, {Component} from 'react'
-import Child from './Child'
+import ChildSimpleView from './ChildSimpleView'
 
 class Children extends Component {
   render(){
     let children = this.props.children.map( (child) => {
       return (
-        <Child
+        <ChildSimpleView
           key = { child._id }
           child = { child }
+          editingChildId={ this.props.editingChildId }
+          onEditChild={ this.props.onEditChild }
+          onUpdateChild={ this.props.onUpdateChild }
           onRemoveChild = { this.props.onRemoveChild }
         />
       )
     })
     return(
-      <div className="children">
+      <div className="children row">
         { children }
       </div>
     )
