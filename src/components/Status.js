@@ -8,11 +8,11 @@ class Status extends Component {
   render() {
     return (
   		<header className="Status bg-secondary text-white text-center">
-        <div className="row"> 
-          <div className="col col-2 offset-1">
+        <div className="row h4"> 
+          <div className="col-3">
           	<Link to={'/'}>Sparrows</Link>
           </div>  
-          <div className="col col-2 offset-6">
+          <div className="col-3 offset-6">
    	       	<Moment format="(ddd) MMM.DD" />
           </div>  
         </div>
