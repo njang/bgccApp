@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import ChildModel from '../models/Child'
-import Children from '../components/Children'
+// import Children from '../components/Children'
 import ChildFullView from '../components/ChildFullView'
+import { Redirect } from 'react-router-dom';
 
 class ChildContainer extends Component {
 	constructor(){
@@ -9,11 +10,12 @@ class ChildContainer extends Component {
     this.state = {
       child: '',
       editingChildId: null,
-      editing: false
+      editing: false,
+      redirectToNewPage: false
     }
     this.editChild = this.editChild.bind(this);
     this.updateChild = this.updateChild.bind(this);
-    // this.removeChild = this.removeChild.bind(this);
+    this.removeChild = this.removeChild.bind(this);
   }
 
   editChild(child){
@@ -40,17 +42,31 @@ class ChildContainer extends Component {
     })
   }
 
+  removeChild() {
+    ChildModel.delete(this.props.match.params.id).then((res) => {
+      this.setState({ redirectToNewPage: true })      
+    });
+  }
+
   render(){
+    // Upon successful completion of submit, the page will be redirected to home.
+    if (this.state.redirectToNewPage) {
+      return (
+        <Redirect to="/"/>
+      )
+    }
   	let self = this;
   	if (this.state.child === '') {
 	  	ChildModel.getOne(this.props.match.params.id).then((res) => {
-		  	let child = res.data[0]
+        // console.log(res.data[0])
+        let child = res.data[0]
 		  	let renderedChild = (
 	  			<ChildFullView 
             editingChildId = { this.state.editingChildId }
             onEditChild = { this.editChild }
             onUpdateChild = { this.updateChild }
             onRemoveChild = { this.removeChild }
+            id = { child._id }
             name = { child.name.first + ' ' + child.name.last }
             dob = { child.dob }
             emergencyContact = { child.emergencyContact }

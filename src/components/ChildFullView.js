@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import './Child.css';
-import EditChildForm from './EditChild'
-import {Link} from 'react-router-dom';
+// import EditChildForm from './EditChild'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import { faPhone, faTimesCircle, faEdit } from '@fortawesome/fontawesome-free-solid'
 
@@ -17,7 +16,7 @@ class ChildFullView extends Component {
   }
 
   removeClickedChild() {
-    this.props.onRemoveChild(this.props.child);
+    this.props.onRemoveChild(this.props);
   }
 
   editClickedChild() {
@@ -26,13 +25,15 @@ class ChildFullView extends Component {
 
   render(){
     return(
-      <div className='col-12 childCardOuter'>
+      <div className='col-10 offset-1 childCardOuter'>
         <div className='childCardInner row'>
           <div className='col-2'>
-            <img className='avatar' src={ iconsArray[this.props.icon] } />
+            <img className='avatar' alt='avatar' src={ iconsArray[this.props.icon] } />
           </div>
           <div className='nameDisplayFull col-5'>
-            { this.props.name } 
+            { this.props.name }
+            <br />
+            { this.props.dob }
           </div>
           <div className='col-1 h2 text-white'>
             <FontAwesomeIcon icon={ faEdit } onClick={ this.editClickedChild } />
@@ -42,7 +43,7 @@ class ChildFullView extends Component {
           </div>
           <a href= { 'tel:' + this.props.emergencyContact } className='col-3 emergencyCallButton'>
             <FontAwesomeIcon icon={ faPhone } />
-            <p>Emergency</p>
+            {/*} <p>Emergency</p> */}
           </a>
           {/*<div className='col col-3'>{this.props.child.name}</div>
           <span className='col col-3'>{this.props.child.dob}</span>
@@ -61,6 +62,7 @@ class ChildFullView extends Component {
           }
           <button className='col col-1 deleteButton' onClick={this.removeClickedChild}>(X)</button>*/}
         </div>
+        something something
       </div>
     )
   }

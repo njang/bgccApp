@@ -14,8 +14,8 @@ class ChildModel extends Component {
 	return request
 	}
 
-	static delete(child){
-	  let request = axios.delete(`${url}/${child._id}`)
+	static delete(childId){
+	  let request = axios.delete(`${url}/${childId}`)
 	  return request
 	}
 
