@@ -24,9 +24,14 @@ class EditChildForm extends Component {
   onSubmit(event){
     event.preventDefault()
     let self = this
-   
     let childObject = {
       id: self.props.id,
+      // name: {
+      //   first: self.props.name.split(' ')[0],
+      //   last: self.props.name.split(' ')[1]
+      // },
+      // dob: self.props.dob,
+      // emergencyContact: self.props.emergencyContact,
       // If the field is left unfilled, use the values passed from Child component
       name: {
         first: self.state.name ? self.state.name.split(' ')[0] : self.props.name.split(' ')[0],
@@ -36,6 +41,7 @@ class EditChildForm extends Component {
       emergencyContact: self.state.emergencyContact ? self.state.emergencyContact : self.props.emergencyContact,
       type: 'child'
     }
+    // console.log(childObject.id);
     this.props.onUpdateChild(childObject);
     self.setState({
       name: '',
