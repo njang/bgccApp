@@ -38,6 +38,7 @@ class ChildContainer extends Component {
     //   return child._id === childId;
     // }
     let self = this
+    console.log(this)
     ChildModel.update(childId, childBody).then((res) => {
       let children = self.state.children
       // children.find(isUpdatedChild).body = childBody
@@ -65,7 +66,7 @@ class ChildContainer extends Component {
     // Upon successful completion of submit, the page will be redirected to home.
     if (this.state.redirectToNewPage) {
       return (
-        <Redirect to="/"/>
+        <Redirect to="/" />
       )
     }
     if (this.state.child === '') {
@@ -90,12 +91,10 @@ class ChildContainer extends Component {
       })
     }
 
-    // console.log(this.state.inEditMode)
     if (this.state.inEditMode === true) {
       editChildForm = (
         <EditChildForm 
           id = { this.state.childObject._id }
-
           name={ this.state.childObject.name.first + ' ' + this.state.childObject.name.last } 
           dob={ this.state.childObject.dob } 
           emergencyContact={ this.state.childObject.emergencyContact } 
@@ -107,7 +106,7 @@ class ChildContainer extends Component {
     return(
       <div className="children row" index={this.props.match.params.id} >
         { this.state.child }
-        { editChildForm } 			
+        {/* editChildForm */}
       </div>
     )
   }
