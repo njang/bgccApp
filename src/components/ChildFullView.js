@@ -12,6 +12,7 @@ const iconsArray = keys.map(key => icons(key))
 class ChildFullView extends Component {
   constructor() {
     super();
+
     this.removeClickedChild = this.removeClickedChild.bind(this);
     this.editClickedChild = this.editClickedChild.bind(this);
   }
@@ -26,18 +27,20 @@ class ChildFullView extends Component {
 
   render(){
     return(
-      <div className="col-12 childCardOuter">
-        <div className="childCardInner row">
-          <img className="avatar col-2" src={ iconsArray[this.props.icon] } />
-          <div className="nameDisplayFull col-7" >{ this.props.name }</div>
-          <a href= { "tel:" + this.props.emergencyContact } className="col-3 emergencyCallButton">
+      <div className='col-12 childCardOuter'>
+        <div className='childCardInner row'>
+          <div className='col-2'>
+            <img className='avatar' src={ iconsArray[this.props.icon] } />
+          </div>
+          <div className='nameDisplayFull col-7' >{ this.props.name }</div>
+          <a href= { 'tel:' + this.props.emergencyContact } className='col-3 emergencyCallButton'>
             <FontAwesomeIcon icon={ faPhone } />
             <p>Emergency</p>
           </a>
-          {/*<div className="col col-3">{this.props.child.name}</div>
-          <span className="col col-3">{this.props.child.dob}</span>
-          <span className="col col-3">{this.props.child.emergencyContact}</span>
-          <button className="col col-2" onClick={ this.editClickedChild }>Edit</button>
+          {/*<div className='col col-3'>{this.props.child.name}</div>
+          <span className='col col-3'>{this.props.child.dob}</span>
+          <span className='col col-3'>{this.props.child.emergencyContact}</span>
+          <button className='col col-2' onClick={ this.editClickedChild }>Edit</button>
           { this.props.editingChildId === this.props.child._id ? 
             <EditChildForm 
               autoFocus = { true } 
