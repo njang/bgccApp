@@ -23,7 +23,9 @@ class ChildContainer extends Component {
 		  	let child = res.data[0]
 		  	let renderedChild = (
 	  			<ChildFullView 
-	  			  name = { child.name.first }
+	  			  name = { child.name.first + ' ' + child.name.last }
+	  			  icon = { child.icon }
+	  			  emergencyContact = { child.emergencyContact }
 	  			/>
 	  		)
 	  		self.setState({

@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import './Child.css';
 import EditChildForm from './EditChild'
 import {Link} from 'react-router-dom';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import { faPhone } from '@fortawesome/fontawesome-free-solid'
 
 const icons = require.context('../icons', true, /\.png$/)
 const keys = icons.keys()
@@ -24,10 +26,14 @@ class ChildFullView extends Component {
 
   render(){
     return(
-      <div className="col-sm-12 col-md-6 col-lg-4 childCardOuter">
-        <div className="childCardInner">
-          <span className="nameDisplay" >{ this.props.name }</span>
-          
+      <div className="col-12 childCardOuter">
+        <div className="childCardInner row">
+          <img className="avatar col-2" src={ iconsArray[this.props.icon] } />
+          <div className="nameDisplayFull col-7" >{ this.props.name }</div>
+          <a href= { "tel:" + this.props.emergencyContact } className="col-3 emergencyCallButton">
+            <FontAwesomeIcon icon={ faPhone } />
+            <p>Emergency</p>
+          </a>
           {/*<div className="col col-3">{this.props.child.name}</div>
           <span className="col col-3">{this.props.child.dob}</span>
           <span className="col col-3">{this.props.child.emergencyContact}</span>
