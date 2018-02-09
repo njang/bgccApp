@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import './Child.css';
-// import EditChildForm from './EditChild'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import { faPhone, faTimesCircle, faEdit } from '@fortawesome/fontawesome-free-solid'
 
@@ -11,6 +10,9 @@ const iconsArray = keys.map(key => icons(key))
 class ChildFullView extends Component {
   constructor() {
     super();
+    this.state = {
+      child: ''
+    }
     this.removeClickedChild = this.removeClickedChild.bind(this);
     this.editClickedChild = this.editClickedChild.bind(this);
   }
@@ -20,6 +22,11 @@ class ChildFullView extends Component {
   }
 
   editClickedChild() {
+    // toggle edit mode on and off
+    let updatedState = !(this.state.inEditMode)
+    this.setState({
+      inEditMode: updatedState
+    })
     this.props.onEditChild(this.props.child);
   }
 
@@ -30,7 +37,7 @@ class ChildFullView extends Component {
           <div className='col-2'>
             <img className='avatar' alt='avatar' src={ iconsArray[this.props.icon] } />
           </div>
-          <div className='nameDisplayFull col-5'>
+          <div className='nameDisplayFull col-7'>
             { this.props.name }
             <br />
             { this.props.dob }
@@ -41,10 +48,11 @@ class ChildFullView extends Component {
           <div className='col-1 h2 text-danger'>
             <FontAwesomeIcon icon={ faTimesCircle } onClick={this.removeClickedChild} />
           </div>
-          <a href= { 'tel:' + this.props.emergencyContact } className='col-3 emergencyCallButton'>
+          <a href= { 'tel:' + this.props.emergencyContact } className='col-1 emergencyCallButton'>
             <FontAwesomeIcon icon={ faPhone } />
-            {/*} <p>Emergency</p> */}
+            {/* <p>Emergency</p> */}
           </a>
+
           {/*<div className='col col-3'>{this.props.child.name}</div>
           <span className='col col-3'>{this.props.child.dob}</span>
           <span className='col col-3'>{this.props.child.emergencyContact}</span>
@@ -62,7 +70,6 @@ class ChildFullView extends Component {
           }
           <button className='col col-1 deleteButton' onClick={this.removeClickedChild}>(X)</button>*/}
         </div>
-        something something
       </div>
     )
   }

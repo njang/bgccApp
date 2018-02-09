@@ -24,16 +24,19 @@ class EditChildForm extends Component {
   onSubmit(event){
     event.preventDefault()
     let self = this
+   
     let childObject = {
       id: self.props.id,
       // If the field is left unfilled, use the values passed from Child component
-      name: self.state.name ? self.state.name : self.props.fillName,
-      dob: self.state.dob? self.state.dob : self.props.fillDOB,
-      emergencyContact: self.state.emergencyContact ? self.state.emergencyContact : self.props.fillEmergencyContact,
+      name: {
+        first: self.state.name ? self.state.name.split(' ')[0] : self.props.name.split(' ')[0],
+        last: self.state.name ? self.state.name.split(' ')[1] : self.props.name.split(' ')[1]
+      },
+      dob: self.state.dob ? self.state.dob : self.props.dob,
+      emergencyContact: self.state.emergencyContact ? self.state.emergencyContact : self.props.emergencyContact,
       type: 'child'
     }
     this.props.onUpdateChild(childObject);
-    this.forceUpdate();
     self.setState({
       name: '',
       dob: '',
@@ -50,19 +53,19 @@ class EditChildForm extends Component {
             type = 'text'
             autoFocus = { this.props.autoFocus }
             onChange = { this.onChange }
-            defaultValue = { this.props.fillName }
+            defaultValue = { this.props.name }
           />
           <input
             name = 'dob'
             type ='text'
             onChange = { this.onChange }
-            defaultValue = { this.props.fillDOB }
+            defaultValue = { this.props.dob }
           />
           <input
           	name = 'emergencyContact'
             type = 'text'
             onChange = { this.onChange }
-            defaultValue = { this.props.fillEmergencyContact }
+            defaultValue = { this.props.emergencyContact }
           />
           <button type='submit'>Update</button>
         </form>

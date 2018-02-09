@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ChildModel from '../models/Child'
+import EditChildForm from '../components/EditChild'
 // import Children from '../components/Children'
 import ChildFullView from '../components/ChildFullView'
 import { Redirect } from 'react-router-dom';
@@ -9,9 +10,11 @@ class ChildContainer extends Component {
     super()
     this.state = {
       child: '',
+      childObject: '',
       editingChildId: null,
-      editing: false,
-      redirectToNewPage: false
+      // editing: false,
+      redirectToNewPage: false,
+      inEditMode: false
     }
     this.editChild = this.editChild.bind(this);
     this.updateChild = this.updateChild.bind(this);
@@ -19,25 +22,31 @@ class ChildContainer extends Component {
   }
 
   editChild(child){
+    // this.setState({
+      // editingChildId: child._id,
+      // editing: true
+    // })
+    let updatedState = !(this.state.inEditMode)
     this.setState({
-      editingChildId: child._id,
-      editing: true
+      inEditMode: updatedState
     })
   }
 
   updateChild(childBody) {
     let childId = childBody.id
-    function isUpdatedChild(child) {
-      return child._id === childId;
-    }
+    // function isUpdatedChild(child) {
+    //   return child._id === childId;
+    // }
     let self = this
     ChildModel.update(childId, childBody).then((res) => {
       let children = self.state.children
-      children.find(isUpdatedChild).body = childBody
+      // children.find(isUpdatedChild).body = childBody
       self.setState({
-        children: children, 
-        editingChildId: null, 
-        editing: false
+        child: '',
+        // children: children, 
+        // editingChildId: null, 
+        // editing: false,
+        inEditMode: false
       })
     })
   }
@@ -49,38 +58,56 @@ class ChildContainer extends Component {
   }
 
   render(){
+  	let self = this;
+    let child;
+    let editChildForm; 
+
     // Upon successful completion of submit, the page will be redirected to home.
     if (this.state.redirectToNewPage) {
       return (
         <Redirect to="/"/>
       )
     }
-  	let self = this;
-  	if (this.state.child === '') {
-	  	ChildModel.getOne(this.props.match.params.id).then((res) => {
-        // console.log(res.data[0])
-        let child = res.data[0]
-		  	let renderedChild = (
-	  			<ChildFullView 
+    if (this.state.child === '') {
+      ChildModel.getOne(this.props.match.params.id).then((res) => {
+        child = res.data[0]
+        let renderedChild = (
+          <ChildFullView 
             editingChildId = { this.state.editingChildId }
             onEditChild = { this.editChild }
-            onUpdateChild = { this.updateChild }
             onRemoveChild = { this.removeChild }
             id = { child._id }
             name = { child.name.first + ' ' + child.name.last }
             dob = { child.dob }
             emergencyContact = { child.emergencyContact }
             icon = { child.icon }
-	  			/>
-	  		)
-	  		self.setState({
-	  			child: renderedChild
-	  		})
-	  	})
-  	}
+          />
+        )
+        self.setState({
+          child: renderedChild,
+          childObject: child
+        })
+      })
+    }
+
+    // console.log(this.state.inEditMode)
+    if (this.state.inEditMode === true) {
+      editChildForm = (
+        <EditChildForm 
+          id = { this.state.childObject._id }
+
+          name={ this.state.childObject.name.first + ' ' + this.state.childObject.name.last } 
+          dob={ this.state.childObject.dob } 
+          emergencyContact={ this.state.childObject.emergencyContact } 
+          onUpdateChild = { this.updateChild }
+        />
+      )
+    }
+
     return(
       <div className="children row" index={this.props.match.params.id} >
-        { this.state.child } 				
+        { this.state.child }
+        { editChildForm } 			
       </div>
     )
   }
