@@ -73,7 +73,6 @@ class ChildContainer extends Component {
           <ChildFullView 
             editingChildId = { this.state.editingChildId }
             onEditChild = { this.editChild }
-            onUpdateChild = { this.updateChild }
             onRemoveChild = { this.removeChild }
             id = { child._id }
             name = { child.name.first + ' ' + child.name.last }
@@ -91,12 +90,14 @@ class ChildContainer extends Component {
 
     // console.log(this.state.inEditMode)
     if (this.state.inEditMode === true) {
-      console.log(this.state.childObject)
       editChildForm = (
         <EditChildForm 
-          fillName={ this.state.childObject.name.first + ' ' + this.state.childObject.name.last } 
-          fillDOB={ this.state.childObject.dob } 
-          fillEmergencyContact={ this.state.childObject.emergencyContact } 
+          id = { this.state.childObject._id }
+
+          name={ this.state.childObject.name.first + ' ' + this.state.childObject.name.last } 
+          dob={ this.state.childObject.dob } 
+          emergencyContact={ this.state.childObject.emergencyContact } 
+          onUpdateChild = { this.updateChild }
         />
       )
     }

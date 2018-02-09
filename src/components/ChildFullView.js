@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import './Child.css';
-import ChildModel from '../models/Child'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import { faPhone, faTimesCircle, faEdit } from '@fortawesome/fontawesome-free-solid'
 
@@ -32,26 +31,6 @@ class ChildFullView extends Component {
   }
 
   render(){
-    let self = this;
-    if (this.state.child === '') {
-      ChildModel.getOne(self.props.id).then((res) => {
-        let thisChild = res.data[0];
-        // console.log(thisChild);
-        // let renderedChild = {
-        //   name={ 
-        //     first: thisChild.name.first, 
-        //     last: thisChild.name.last 
-        //   }
-        //   dob={ thisChild.dob } 
-        //   emergencyContact={ thisChild.emergencyContact }
-        // }
-        // self.setState({
-        //   child: renderedChild,
-        //   childObject: thisChild
-        // })
-      })
-    }
-
     return(
       <div className='col-10 offset-1 childCardOuter'>
         <div className='childCardInner row'>
@@ -73,7 +52,7 @@ class ChildFullView extends Component {
             <FontAwesomeIcon icon={ faPhone } />
             {/* <p>Emergency</p> */}
           </a>
-          
+
           {/*<div className='col col-3'>{this.props.child.name}</div>
           <span className='col col-3'>{this.props.child.dob}</span>
           <span className='col col-3'>{this.props.child.emergencyContact}</span>
