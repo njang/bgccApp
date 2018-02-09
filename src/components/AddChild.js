@@ -9,12 +9,13 @@ class AddChildForm extends Component {
       name: '',
       dob: '',
       emergencyContact: '',
-      type: 'child'
+      type: 'child',
+      redirectToNewPage: false
     }
     this.onInputChange = this.onInputChange.bind(this);
     this.onFormSubmit = this.onFormSubmit.bind(this);
     // Initialize redirect flag to false.
-    this.redirectToNewPage = false;
+    // this.redirectToNewPage = false;
   }
   onInputChange(event){
     const target = event.target;

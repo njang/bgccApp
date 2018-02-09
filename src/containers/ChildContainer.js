@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ChildModel from '../models/Child'
+import EditChildForm from '../components/EditChild'
 // import Children from '../components/Children'
 import ChildFullView from '../components/ChildFullView'
 import { Redirect } from 'react-router-dom';
@@ -9,9 +10,11 @@ class ChildContainer extends Component {
     super()
     this.state = {
       child: '',
+      childObject: '',
       editingChildId: null,
       editing: false,
-      redirectToNewPage: false
+      redirectToNewPage: false,
+      inEditMode: false
     }
     this.editChild = this.editChild.bind(this);
     this.updateChild = this.updateChild.bind(this);
@@ -20,8 +23,12 @@ class ChildContainer extends Component {
 
   editChild(child){
     this.setState({
-      editingChildId: child._id,
+      // editingChildId: child._id,
       editing: true
+    })
+    let updatedState = !(this.state.inEditMode)
+    this.setState({
+      inEditMode: updatedState
     })
   }
 
@@ -49,19 +56,21 @@ class ChildContainer extends Component {
   }
 
   render(){
+  	let self = this;
+    let child;
+    let editChildForm; 
+
     // Upon successful completion of submit, the page will be redirected to home.
     if (this.state.redirectToNewPage) {
       return (
         <Redirect to="/"/>
       )
     }
-  	let self = this;
-  	if (this.state.child === '') {
-	  	ChildModel.getOne(this.props.match.params.id).then((res) => {
-        // console.log(res.data[0])
-        let child = res.data[0]
-		  	let renderedChild = (
-	  			<ChildFullView 
+    if (this.state.child === '') {
+      ChildModel.getOne(this.props.match.params.id).then((res) => {
+        child = res.data[0]
+        let renderedChild = (
+          <ChildFullView 
             editingChildId = { this.state.editingChildId }
             onEditChild = { this.editChild }
             onUpdateChild = { this.updateChild }
@@ -71,16 +80,31 @@ class ChildContainer extends Component {
             dob = { child.dob }
             emergencyContact = { child.emergencyContact }
             icon = { child.icon }
-	  			/>
-	  		)
-	  		self.setState({
-	  			child: renderedChild
-	  		})
-	  	})
-  	}
+          />
+        )
+        self.setState({
+          child: renderedChild,
+          childObject: child
+        })
+      })
+    }
+
+    // console.log(this.state.inEditMode)
+    if (this.state.inEditMode === true) {
+      console.log(this.state.childObject)
+      editChildForm = (
+        <EditChildForm 
+          fillName={ this.state.childObject.name.first + ' ' + this.state.childObject.name.last } 
+          fillDOB={ this.state.childObject.dob } 
+          fillEmergencyContact={ this.state.childObject.emergencyContact } 
+        />
+      )
+    }
+
     return(
       <div className="children row" index={this.props.match.params.id} >
-        { this.state.child } 				
+        { this.state.child }
+        { editChildForm } 			
       </div>
     )
   }

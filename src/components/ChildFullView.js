@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import './Child.css';
-// import EditChildForm from './EditChild'
+import ChildModel from '../models/Child'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import { faPhone, faTimesCircle, faEdit } from '@fortawesome/fontawesome-free-solid'
 
@@ -11,6 +11,9 @@ const iconsArray = keys.map(key => icons(key))
 class ChildFullView extends Component {
   constructor() {
     super();
+    this.state = {
+      child: ''
+    }
     this.removeClickedChild = this.removeClickedChild.bind(this);
     this.editClickedChild = this.editClickedChild.bind(this);
   }
@@ -20,10 +23,35 @@ class ChildFullView extends Component {
   }
 
   editClickedChild() {
+    // toggle edit mode on and off
+    let updatedState = !(this.state.inEditMode)
+    this.setState({
+      inEditMode: updatedState
+    })
     this.props.onEditChild(this.props.child);
   }
 
   render(){
+    let self = this;
+    if (this.state.child === '') {
+      ChildModel.getOne(self.props.id).then((res) => {
+        let thisChild = res.data[0];
+        // console.log(thisChild);
+        // let renderedChild = {
+        //   name={ 
+        //     first: thisChild.name.first, 
+        //     last: thisChild.name.last 
+        //   }
+        //   dob={ thisChild.dob } 
+        //   emergencyContact={ thisChild.emergencyContact }
+        // }
+        // self.setState({
+        //   child: renderedChild,
+        //   childObject: thisChild
+        // })
+      })
+    }
+
     return(
       <div className='col-10 offset-1 childCardOuter'>
         <div className='childCardInner row'>
@@ -43,8 +71,9 @@ class ChildFullView extends Component {
           </div>
           <a href= { 'tel:' + this.props.emergencyContact } className='col-3 emergencyCallButton'>
             <FontAwesomeIcon icon={ faPhone } />
-            {/*} <p>Emergency</p> */}
+            {/* <p>Emergency</p> */}
           </a>
+          
           {/*<div className='col col-3'>{this.props.child.name}</div>
           <span className='col col-3'>{this.props.child.dob}</span>
           <span className='col col-3'>{this.props.child.emergencyContact}</span>
@@ -62,7 +91,6 @@ class ChildFullView extends Component {
           }
           <button className='col col-1 deleteButton' onClick={this.removeClickedChild}>(X)</button>*/}
         </div>
-        something something
       </div>
     )
   }
