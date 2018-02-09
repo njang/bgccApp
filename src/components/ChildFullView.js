@@ -37,7 +37,7 @@ class ChildFullView extends Component {
           <div className='col-2'>
             <img className='avatar' alt='avatar' src={ iconsArray[this.props.icon] } />
           </div>
-          <div className='nameDisplayFull col-5'>
+          <div className='nameDisplayFull col-7'>
             { this.props.name }
             <br />
             { this.props.dob }
@@ -48,7 +48,7 @@ class ChildFullView extends Component {
           <div className='col-1 h2 text-danger'>
             <FontAwesomeIcon icon={ faTimesCircle } onClick={this.removeClickedChild} />
           </div>
-          <a href= { 'tel:' + this.props.emergencyContact } className='col-3 emergencyCallButton'>
+          <a href= { 'tel:' + this.props.emergencyContact } className='col-1 emergencyCallButton'>
             <FontAwesomeIcon icon={ faPhone } />
             {/* <p>Emergency</p> */}
           </a>

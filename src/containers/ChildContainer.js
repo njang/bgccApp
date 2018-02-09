@@ -12,7 +12,7 @@ class ChildContainer extends Component {
       child: '',
       childObject: '',
       editingChildId: null,
-      editing: false,
+      // editing: false,
       redirectToNewPage: false,
       inEditMode: false
     }
@@ -22,10 +22,10 @@ class ChildContainer extends Component {
   }
 
   editChild(child){
-    this.setState({
+    // this.setState({
       // editingChildId: child._id,
-      editing: true
-    })
+      // editing: true
+    // })
     let updatedState = !(this.state.inEditMode)
     this.setState({
       inEditMode: updatedState
@@ -34,17 +34,19 @@ class ChildContainer extends Component {
 
   updateChild(childBody) {
     let childId = childBody.id
-    function isUpdatedChild(child) {
-      return child._id === childId;
-    }
+    // function isUpdatedChild(child) {
+    //   return child._id === childId;
+    // }
     let self = this
     ChildModel.update(childId, childBody).then((res) => {
       let children = self.state.children
-      children.find(isUpdatedChild).body = childBody
+      // children.find(isUpdatedChild).body = childBody
       self.setState({
-        children: children, 
-        editingChildId: null, 
-        editing: false
+        child: '',
+        // children: children, 
+        // editingChildId: null, 
+        // editing: false,
+        inEditMode: false
       })
     })
   }
