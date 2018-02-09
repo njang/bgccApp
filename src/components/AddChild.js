@@ -49,41 +49,44 @@ class AddChildForm extends Component {
   }
   render(){
     return (
-      <div>
-        <h2>Add child to classroom</h2>
+       <div>
+        <h2 className='text-center'>Add a child to classroom</h2>
         <form onSubmit={ this.onFormSubmit }>
-          <label>
-            Name
-            <input
+          <div className='row'>
+            <label className='col-2 offset-3'>
+              Name
+            </label>
+            <input className='col-4'
               name='name'
               type='text'
               onChange={ this.onInputChange }
               placeholder="Add child's name"
               value={ this.state.name } 
               required />
-          </label>
-          <br />
-          <label>
-            Date of birth:
-            <input
+          </div>
+          <div className='row'>
+            <label className='col-2 offset-3'>
+              Date of birth
+            </label>
+            <input className='col-4'
               name="dob"
               type="text"
               value={this.state.dob}
               onChange={ this.onInputChange } 
               required />
-          </label>
-          <br />
-          <label>
-            Emergency contact:
-            <input
+          </div>
+          <div className='row'>
+            <label className='col-2 offset-3'>
+              Emergency contact
+            </label>
+            <input className='col-4'
               name="emergencyContact"
               type="text"
               value={ this.state.emergencyContact }
               onChange={ this.onInputChange } 
               required />
-          </label>
-          <br />
-          <button type='submit'>Add</button>
+          </div>
+          <button className='text-center' type='submit'>Add</button>
         </form>
       </div>
     )

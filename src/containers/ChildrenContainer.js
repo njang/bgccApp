@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import ChildModel from '../models/Child'
 import Children from '../components/Children'
 import AddChildForm from '../components/AddChild'
+import {Link} from 'react-router-dom';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import { faPlusCircle } from '@fortawesome/fontawesome-free-solid'
 
 class ChildrenContainer extends Component {
   constructor(){
@@ -79,15 +82,18 @@ class ChildrenContainer extends Component {
       <div className="childrenList">
         <Children
           children = { this.state.children } 
-
           editingChildId = { this.state.editingChildId }
           onEditChild = { this.editChild }
-          // onDeleteChild = { this.deleteChild } 
           onUpdateChild = { this.updateChild }
-          
           onRemoveChild = { this.removeChild }/>
-        <AddChildForm
-          addChild={ this.addChild } />  
+        <div className="col-sm-12 col-md-6 col-lg-4 offset-lg-8 offset-md-6 childCardOuter"> 
+          <Link to = { '/children/add' }>
+            <div className='childCardInner text-white'>
+              <FontAwesomeIcon className="avatar" icon={ faPlusCircle } />
+              <span className="nameDisplay">Add child</span>
+            </div>
+          </Link>
+        </div>
       </div>
     )
   }

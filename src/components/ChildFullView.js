@@ -3,7 +3,7 @@ import './Child.css';
 import EditChildForm from './EditChild'
 import {Link} from 'react-router-dom';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import { faPhone } from '@fortawesome/fontawesome-free-solid'
+import { faPhone, faTimesCircle, faEdit } from '@fortawesome/fontawesome-free-solid'
 
 const icons = require.context('../icons', true, /\.png$/)
 const keys = icons.keys()
@@ -12,7 +12,6 @@ const iconsArray = keys.map(key => icons(key))
 class ChildFullView extends Component {
   constructor() {
     super();
-
     this.removeClickedChild = this.removeClickedChild.bind(this);
     this.editClickedChild = this.editClickedChild.bind(this);
   }
@@ -32,7 +31,15 @@ class ChildFullView extends Component {
           <div className='col-2'>
             <img className='avatar' src={ iconsArray[this.props.icon] } />
           </div>
-          <div className='nameDisplayFull col-7' >{ this.props.name }</div>
+          <div className='nameDisplayFull col-5'>
+            { this.props.name } 
+          </div>
+          <div className='col-1 h2 text-white'>
+            <FontAwesomeIcon icon={ faEdit } onClick={ this.editClickedChild } />
+          </div>
+          <div className='col-1 h2 text-danger'>
+            <FontAwesomeIcon icon={ faTimesCircle } onClick={this.removeClickedChild} />
+          </div>
           <a href= { 'tel:' + this.props.emergencyContact } className='col-3 emergencyCallButton'>
             <FontAwesomeIcon icon={ faPhone } />
             <p>Emergency</p>
