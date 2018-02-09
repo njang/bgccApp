@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Moment from 'react-moment';
 import './Status.css';
+import {Link} from 'react-router-dom';
+
 
 class Status extends Component {
   render() {
@@ -8,7 +10,7 @@ class Status extends Component {
   		<header className="Status bg-secondary text-white text-center">
         <div className="row"> 
           <div className="col col-2 offset-1">
-          	Sparrows
+          	<Link to={'/'}>Sparrows</Link>
           </div>  
           <div className="col col-2 offset-6">
    	       	<Moment format="(ddd) MMM.DD" />
