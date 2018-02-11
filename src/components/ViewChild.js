@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import ChildModel from '../models/Child'
 
 class ViewChildForm extends Component {
 	render() {
