@@ -12,7 +12,8 @@ class ChildrenContainer extends Component {
       children: [],
       childID: '',
       childName: '',
-      childIcon: ''
+      childIcon: '',
+      singleView: false
     }
   }
 
@@ -29,8 +30,6 @@ class ChildrenContainer extends Component {
         childName: res.data.name,
         childIcon: res.data.icon
       })
-      // console.log(res.data)
-      // debugger;
     })
   }
 
@@ -44,19 +43,20 @@ class ChildrenContainer extends Component {
           childIcon = { child.icon }
         />
       )
-    })
+    })  
+    
     return (
       <div className='childrenList'>
         <div className="children row">
           { children }
           {/* Display Add child button after all the children cards are displayed */}
           <div className='col-sm-12 col-md-6 col-lg-4 childCardOuter'>
-            <Link to = { '/children/add' }>
-              <div className='childCardInner text-white'>
-                <FontAwesomeIcon className='avatar' icon={ faPlusCircle } />
-                <span className='nameDisplay'>Add child</span>
-              </div>
-            </Link>
+           <Link to = { '/children/add' }>
+             <div className='childCardInner text-white'>
+               <FontAwesomeIcon className='avatar' icon={ faPlusCircle } />
+               <span className='nameDisplay'>Add child</span>
+             </div>
+           </Link>
           </div>
         </div>
       </div>

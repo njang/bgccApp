@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 // import ChildModel from '../models/Child'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import { faPhone, faTimesCircle, faEdit } from '@fortawesome/fontawesome-free-solid'
 
 class EditChildForm extends Component {
   constructor() {
@@ -11,6 +13,7 @@ class EditChildForm extends Component {
     };
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+    this.removeClickedChild = this.removeClickedChild.bind(this);
   }
 
   onChange(event) {
@@ -50,6 +53,14 @@ class EditChildForm extends Component {
     })
   }
 
+
+  removeClickedChild() {
+    console.log(this.props)
+    debugger;
+    
+    //this.props.onRemoveChild(this.props);
+  }
+
   render(){
     return (
       <div className='editChildForm'>
@@ -75,6 +86,10 @@ class EditChildForm extends Component {
           />
           <button type='submit'>Update</button>
         </form>
+
+        <div className='col-1 h2 text-danger'>
+          <FontAwesomeIcon icon={ faTimesCircle } onClick={this.removeClickedChild} />
+        </div>
       </div>
     )
   }
