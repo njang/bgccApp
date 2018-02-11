@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ChildModel from '../models/Child'
 import EditChildForm from '../components/EditChild'
-// import Children from '../components/Children'
 import ChildFullView from '../components/ChildFullView'
 import { Redirect } from 'react-router-dom';
 
@@ -40,7 +39,7 @@ class ChildContainer extends Component {
     let self = this
     console.log(this)
     ChildModel.update(childId, childBody).then((res) => {
-      let children = self.state.children
+      // let children = self.state.children
       // children.find(isUpdatedChild).body = childBody
       self.setState({
         child: '',
@@ -61,7 +60,7 @@ class ChildContainer extends Component {
   render(){
   	let self = this;
     let child;
-    let editChildForm; 
+    // let editChildForm; 
 
     // Upon successful completion of submit, the page will be redirected to home.
     if (this.state.redirectToNewPage) {
@@ -92,7 +91,7 @@ class ChildContainer extends Component {
     }
 
     if (this.state.inEditMode === true) {
-      editChildForm = (
+      let editChildForm = (
         <EditChildForm 
           id = { this.state.childObject._id }
           name={ this.state.childObject.name.first + ' ' + this.state.childObject.name.last } 
