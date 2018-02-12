@@ -1,3 +1,15 @@
+@media screen and (max-width: 480px) {
+    body {
+        width: 100%;
+    }
+    .childCardOuter {
+      padding: 0;
+    }
+    .childCardInner {
+      padding: 0;
+    }
+}
+
 .childCardOuter {
 	padding: 0.5em;
 }
