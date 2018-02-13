@@ -1,40 +1,39 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
+import './DailyReport.css';
 
 class DailyReport extends Component {
   render(){
     return(
-      <div>
-        <form>
+      <div className='row'>
+        <form className='col-md-4 col-sm-12 form-group'>
           <label>AM Snacks</label>
-          <select class="form-control" id="snacksAM" aria-describedby="emailHelp" placeholder="Enter email">
-            <option value="volvo">--</option>
-            <option value="volvo">Ate all</option>
-            <option value="saab">Ate a lot</option>
-            <option value="mercedes">Ate some</option>
-            <option value="audi">Ate none</option>
+          <select class='form-control' id='snacksAM' aria-describedby='snacksAM' placeholder='Enter email'>
+            <option selected disabled hidden>--</option>
+            <option value='All'>Ate all</option>
+            <option value='Lot'>Ate lots</option>
+            <option value='Some'>Ate some</option>
+            <option value='None'>Ate none</option>
           </select>
         </form>
-
-        <form>
+        <form className='col-md-4 col-sm-12 form-group'>
           <label>Lunch</label>
-          <select class="form-control" id="snacksAM" aria-describedby="emailHelp" placeholder="Enter email">
-            <option value="volvo">--</option>
-            <option value="volvo">Ate all</option>
-            <option value="saab">Ate a lot</option>
-            <option value="mercedes">Ate some</option>
-            <option value="audi">Ate none</option>
+          <select class='form-control' id='lunch' aria-describedby='lunch' placeholder='Enter email'>
+            <option selected disabled hidden>--</option>
+            <option value='All'>Ate all</option>
+            <option value='Lot'>Ate lots</option>
+            <option value='Some'>Ate some</option>
+            <option value='None'>Ate none</option>
           </select>
         </form>
-
-        <form>
+        <form className='col-md-4 col-sm-12 form-group'>
           <label>PM Snacks</label>
-          <select class="form-control" id="snacksAM" aria-describedby="emailHelp" placeholder="Enter email">
-            <option value="volvo">--</option>
-            <option value="volvo">Ate all</option>
-            <option value="saab">Ate a lot</option>
-            <option value="mercedes">Ate some</option>
-            <option value="audi">Ate none</option>
+          <select class='form-control' id='snacksPM' aria-describedby='snacksPM' placeholder='Enter email'>
+            <option selected disabled hidden>--</option>
+            <option value='All'>Ate all</option>
+            <option value='Lot'>Ate lots</option>
+            <option value='Some'>Ate some</option>
+            <option value='None'>Ate none</option>
           </select>
         </form>
         
