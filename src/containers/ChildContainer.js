@@ -104,8 +104,10 @@ class ChildContainer extends Component {
     }
 
     return(
-      <div className="children row" index={this.props.match.params.id} >
-        { this.state.child }
+      <div>
+        <div className="children row" index={this.props.match.params.id} >
+          { this.state.child }
+        </div>
         <DailyReport />
       </div>
     )
