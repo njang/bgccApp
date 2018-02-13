@@ -9,10 +9,10 @@ class Status extends Component {
     return (
   		<header className="Status bg-secondary text-white text-center">
         <div className="row h4"> 
-          <div className="col-3">
+          <div className="col-3 col-sm-6">
           	<Link to={'/'}>Sparrows</Link>
           </div>  
-          <div className="col-3 offset-6">
+          <div className="col-3 offset-6 col-sm-6">
    	       	<Moment format="(ddd) MMM.DD" />
           </div>  
         </div>

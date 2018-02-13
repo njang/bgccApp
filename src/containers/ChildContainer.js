@@ -3,6 +3,7 @@ import ChildModel from '../models/Child'
 import EditChildForm from '../components/EditChild'
 import ChildFullView from '../components/ChildFullView'
 import { Redirect } from 'react-router-dom';
+import DailyReport from '../components/DailyReport'
 
 class ChildContainer extends Component {
 	constructor(){
@@ -103,9 +104,11 @@ class ChildContainer extends Component {
     }
 
     return(
-      <div className="children row" index={this.props.match.params.id} >
-        { this.state.child }
-        {/* editChildForm */}
+      <div>
+        <div className="children row" index={this.props.match.params.id} >
+          { this.state.child }
+        </div>
+        <DailyReport />
       </div>
     )
   }

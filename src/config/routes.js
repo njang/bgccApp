@@ -22,6 +22,6 @@ export default (
     <Route path='/play' component={ Play } />
     <Route path='/potty' component={ Potty } />
     <Route path='/incident' component={ Incident } />
-	  </Switch>
+  </Switch>
 )
 

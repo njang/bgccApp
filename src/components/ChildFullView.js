@@ -19,10 +19,10 @@ class ChildFullView extends Component {
     this.removeClickedChild = this.removeClickedChild.bind(this);
     this.updateClickedChild = this.updateClickedChild.bind(this);
     this.editClickedChild = this.editClickedChild.bind(this);
-
   }
 
   removeClickedChild() {
+    console.log(this.props)
     this.props.onRemoveChild(this.props);
   }
 
@@ -67,6 +67,16 @@ class ChildFullView extends Component {
   }
 
   render(){
+    let displayElementX = (
+      <div>
+        { this.props.name }
+        <br />
+        { this.props.dob } 
+        <br />
+        { this.props.emergencyContact }
+      </div>
+    );
+
     let displayElement = (
       <ViewChildForm 
         name = { this.props.name }
@@ -93,7 +103,7 @@ class ChildFullView extends Component {
     } 
 
     return(
-      <div className='col-10 offset-1 childCardOuter'>
+      <div className='col-10 offset-1 col-sm-12 offset-sm-0 childCardOuter'>
         <div className='childCardInner row'>
           <div className='col-2'>
             <img className='avatar' alt='avatar' src={ iconsArray[this.props.icon] } />
@@ -106,9 +116,9 @@ class ChildFullView extends Component {
           <div className='col-1 h2 text-white'>
             <FontAwesomeIcon icon={ faEdit } onClick={ this.editClickedChild } />
           </div>
-          <div className='col-1 h2 text-danger'>
-            <FontAwesomeIcon icon={ faTimesCircle } onClick={this.removeClickedChild} />
-          </div>
+          {/*<div className='col-1 h2 text-danger'>
+                      <FontAwesomeIcon icon={ faTimesCircle } onClick={this.removeClickedChild} />
+                    </div>*/}
           <a href= { 'tel:' + this.props.emergencyContact } className='col-1 emergencyCallButton'>
             <FontAwesomeIcon icon={ faPhone } />
             {/* <p>Emergency</p> */}
