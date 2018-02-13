@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ChildModel from '../models/Child'
 import EditChildForm from '../components/EditChild'
 import ChildFullView from '../components/ChildFullView'
+import DocumentContainer from '../containers/DocumentContainer'
 import { Redirect } from 'react-router-dom';
 
 class ChildContainer extends Component {
@@ -105,7 +106,7 @@ class ChildContainer extends Component {
     return(
       <div className="children row" index={this.props.match.params.id} >
         { this.state.child }
-        {/* editChildForm */}
+        <DocumentContainer />
       </div>
     )
   }
