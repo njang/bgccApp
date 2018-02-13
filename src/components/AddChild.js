@@ -74,7 +74,7 @@ class AddChildForm extends Component {
                 name='name'
                 type='text'
                 onChange={ this.onInputChange }
-                placeholder="Add child's name"
+                placeholder="Child's full name"
                 value={ this.state.name } 
                 required />
             </div>
@@ -84,7 +84,7 @@ class AddChildForm extends Component {
               </label>
               <input className='col-5 form-control'
                 name="dob"
-                type="text"
+                type="date"
                 value={this.state.dob}
                 onChange={ this.onInputChange } 
                 placeholder="mm/dd/yyyy"              
@@ -96,7 +96,7 @@ class AddChildForm extends Component {
               </label>
               <input className='col-5 form-control'
                 name="emergencyContact"
-                type="text"
+                type="tel"
                 value={ this.state.emergencyContact }
                 onChange={ this.onInputChange } 
                 placeholder="Phone number"
