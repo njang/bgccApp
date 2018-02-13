@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 // import ChildModel from '../models/Child'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import { faPhone, faTimesCircle, faEdit } from '@fortawesome/fontawesome-free-solid'
+import { faTimesCircle } from '@fortawesome/fontawesome-free-solid'
 
 class EditChildForm extends Component {
   constructor() {
@@ -64,32 +64,29 @@ class EditChildForm extends Component {
   render(){
     return (
       <div className='editChildForm'>
-        <form onSubmit={ this.onSubmit }>
-          <input
+        <form className='row form-group' onSubmit={ this.onSubmit }>
+          <input className='col-8 form-control'
           	name = 'name'
             type = 'text'
             autoFocus = { this.props.autoFocus }
             onChange = { this.onChange }
             defaultValue = { this.props.name }
           />
-          <input
+          <input className='col-8 form-control'
             name = 'dob'
-            type ='text'
+            type ='date'
             onChange = { this.onChange }
             defaultValue = { this.props.dob }
           />
-          <input
+          <button className='col-3 offset-1 btn btn-basic' type='submit'>Update</button>
+          <input className='col-8 form-control'
           	name = 'emergencyContact'
             type = 'text'
             onChange = { this.onChange }
             defaultValue = { this.props.emergencyContact }
           />
-          <button type='submit'>Update</button>
+          <button className='col-3 offset-1 btn btn-danger' onClick={ this.removeClickedChild }>Remove</button>
         </form>
-
-        <div className='col-1 h2 text-danger'>
-          <FontAwesomeIcon icon={ faTimesCircle } onClick={this.removeClickedChild} />
-        </div>
       </div>
     )
   }

@@ -67,6 +67,16 @@ class ChildFullView extends Component {
   }
 
   render(){
+    let displayElementX = (
+      <div>
+        { this.props.name }
+        <br />
+        { this.props.dob } 
+        <br />
+        { this.props.emergencyContact }
+      </div>
+    );
+
     let displayElement = (
       <ViewChildForm 
         name = { this.props.name }
@@ -93,7 +103,7 @@ class ChildFullView extends Component {
     } 
 
     return(
-      <div className='col-10 offset-1 childCardOuter'>
+      <div className='col-10 offset-1 col-sm-12 offset-sm-0 childCardOuter'>
         <div className='childCardInner row'>
           <div className='col-2'>
             <img className='avatar' alt='avatar' src={ iconsArray[this.props.icon] } />
