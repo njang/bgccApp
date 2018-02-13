@@ -3,6 +3,8 @@ import React, {Component} from 'react'
 import './DailyReport.css';
 import Eat from './Eat'
 import Rest from './Rest'
+import Play from './Play'
+import Potty from './Potty'
 
 class DailyReport extends Component {
   render(){
@@ -15,6 +17,8 @@ class DailyReport extends Component {
 	        <Eat meal='PM snack' id='snackPM'/>
 	      </div>
 	      <Rest />
+	      <Play />
+	      <Potty />
 	    </div>
     )
   }
