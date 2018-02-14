@@ -13,7 +13,7 @@ class DailyReport extends Component {
     	<div className='reportCard'>
 	    	<div className='row'>
 	    		<div className='col-6'>
-		    		<h2>Ate</h2>
+		    		<h2>Eat</h2>
 			      <div className='row'>
 			        <Eat meal='AM snack' id='snackAM' />
 			        <Eat meal='Lunch' id='lunch' />
@@ -23,8 +23,8 @@ class DailyReport extends Component {
 		      <Rest />
 		    </div>
 	    	<div className='row'>	    
-		      <Play />
 		      <Potty />
+		      <Play />
 		    </div>
 	    </div>
     )
