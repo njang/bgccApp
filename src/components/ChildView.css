@@ -15,6 +15,7 @@
 }
 .childCardInner {
 	padding: 0.5em;
+	color: white;
 	background: navy;
 	border-color: silver;
 	border-style: solid;
