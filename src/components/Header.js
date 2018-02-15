@@ -7,25 +7,26 @@ import { faBars } from '@fortawesome/fontawesome-free-solid'
 class Header extends Component {
   render() {
     return (
-  		<header className="App-header bg-maroon text-center">
-        <div className="row"> 
-          <div className="col col-2 dropdown">
-            <button class="btn bg-maroon text-white" type="button" data-toggle="dropdown">
-              <FontAwesomeIcon className="h3" icon={ faBars } />
+  		<header className='App-header bg-maroon row'>
+        <FontAwesomeIcon className='h1 col-1' icon={ faBars } />
+        <h1 className='col-2'>Sparrows</h1>
+        <Moment className='h2 col-9 text-right' format='(ddd) MMM.DD' />
+        {/*<div className='row'> 
+          <div className='col col-1'>
+            <button class='btn bg-maroon text-white' type='button' data-toggle='dropdown'>
+              <FontAwesomeIcon className='h3' icon={ faBars } />
             </button>
-            <ul class="dropdown-menu bg-maroon text-white">
-              <li><a href="/eat">Eat</a></li>
-              <li><a href="/rest">Rest</a></li>
-              <li><a href="/play">Play</a></li>
-            </ul>
           </div>
-          <div className="col col-8">
-            <h1 className="App-title text-uppercase font-weight-bold">BGCC</h1>
+          <div className='col col-1'>
+            <h1>Sparrows</h1>
           </div>
-          <div className="col col-2">
-            <Moment format="(ddd) MMM.DD" />
+          <div className='col col-8'>
+            <h1 className='App-title text-uppercase font-weight-bold'>BGCC</h1>
           </div>
-        </div>
+          <div className='col col-2 offset-1'>
+            <Moment format='(ddd) MMM.DD' />
+          </div>
+        </div>*/}
       </header>
     );
   }
