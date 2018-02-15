@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import { faPlusCircle } from '@fortawesome/fontawesome-free-solid'
 import ChildModel from '../models/Child'
 import ChildSimpleView from '../components/ChildSimpleView'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import { faPlusCircle } from '@fortawesome/fontawesome-free-solid'
 
 class ChildrenContainer extends Component {
   constructor(){
@@ -12,8 +12,7 @@ class ChildrenContainer extends Component {
       children: [],
       childID: '',
       childName: '',
-      childIcon: '',
-      singleView: false
+      childIcon: ''
     }
   }
 
@@ -25,7 +24,6 @@ class ChildrenContainer extends Component {
     ChildModel.all().then( (res) => {
       this.setState ({
         children: res.data,
-        child: '',
         childId: res.data._id,
         childName: res.data.name,
         childIcon: res.data.icon
@@ -47,7 +45,7 @@ class ChildrenContainer extends Component {
     
     return (
       <div className='childrenList'>
-        <div className="children row">
+        <div className='children row'>
           { children }
           {/* Display Add child button after all the children cards are displayed */}
           <div className='col-sm-12 col-md-6 col-lg-4 childCardOuter'>

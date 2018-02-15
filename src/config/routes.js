@@ -16,7 +16,7 @@ export default (
   	<Route exact path='/children' component={ ChildrenContainer } />
   	<Route exact path='/children/add' component={ AddChildForm } />
 
-  	<Route path='/children/:id' component={ ChildContainer } />
+  	<Route path='/child/:id' component={ ChildContainer } />
     <Route path='/eat' component={ Eat } />
     <Route path='/rest' component={ Rest } />
     <Route path='/play' component={ Play } />
