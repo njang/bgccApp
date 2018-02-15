@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 // import ChildModel from '../models/Child'
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import { faTimesCircle } from '@fortawesome/fontawesome-free-solid'
+// import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+// import { faTimesCircle } from '@fortawesome/fontawesome-free-solid'
 
 class EditChildForm extends Component {
   constructor() {

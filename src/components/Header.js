@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './Header.css';
+import Moment from 'react-moment';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import { faBars, faUser } from '@fortawesome/fontawesome-free-solid'
+import { faBars } from '@fortawesome/fontawesome-free-solid'
 
 class Header extends Component {
   render() {
@@ -22,7 +23,7 @@ class Header extends Component {
             <h1 className="App-title text-uppercase font-weight-bold">BGCC</h1>
           </div>
           <div className="col col-2">
-            <FontAwesomeIcon className="h3" icon={ faUser } />
+            <Moment format="(ddd) MMM.DD" />
           </div>
         </div>
       </header>

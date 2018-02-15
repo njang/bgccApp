@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Header from './components/Header';
-import Status from './components/Status';
 import Routes from './config/routes';
 
 class App extends Component {
@@ -9,7 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Status />
+        {/*<Status />*/}
         { Routes }
       </div>
     );
