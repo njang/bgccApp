@@ -7,10 +7,16 @@ import { faBars } from '@fortawesome/fontawesome-free-solid'
 class Header extends Component {
   render() {
     return (
-  		<header className='App-header bg-maroon row'>
-        <FontAwesomeIcon className='h1 col-1' icon={ faBars } />
-        <h1 className='col-2'>Sparrows</h1>
-        <Moment className='h2 col-9 text-right' format='(ddd) MMM.DD' />
+  		<div className='App-header row'>
+        <div className='col-1 h2'>
+          <FontAwesomeIcon icon={ faBars } />
+        </div>
+        <div className='col-2 h2'>
+          Sparrows
+        </div>
+        <div className='col-9 h2 text-right'>
+          <Moment format='(ddd) MMM DD' />
+        </div>
         {/*<div className='row'> 
           <div className='col col-1'>
             <button class='btn bg-maroon text-white' type='button' data-toggle='dropdown'>
@@ -27,7 +33,7 @@ class Header extends Component {
             <Moment format='(ddd) MMM.DD' />
           </div>
         </div>*/}
-      </header>
+      </div>
     );
   }
 }
