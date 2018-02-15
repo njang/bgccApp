@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Header.css';
+import {Link} from 'react-router-dom';
 import Moment from 'react-moment';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/fontawesome-free-solid'
@@ -12,7 +13,7 @@ class Header extends Component {
           <FontAwesomeIcon icon={ faBars } />
         </div>
         <div className='col-2 h2'>
-          Sparrows
+          <Link to={'/'}>Sparrows</Link>
         </div>
         <div className='col-9 h2 text-right'>
           <Moment format='(ddd) MMM DD' />
