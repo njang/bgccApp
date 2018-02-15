@@ -66,17 +66,17 @@ class ChildContainer extends Component {
     // Upon successful completion of submit, the page will be redirected to home.
     if (this.state.redirectToNewPage) {
       return (
-        <Redirect to="/" />
+        <Redirect to='/' />
       )
     }
     if (this.state.child === '') {
       ChildModel.getOne(this.props.match.params.id).then((res) => {
         child = res.data[0]
         let renderedChild = (
-          <ChildFullView 
-            editingChildId = { this.state.editingChildId }
-            onEditChild = { this.editChild }
-            onRemoveChild = { this.removeChild }
+          <ChildFullView             
+            // editingChildId = { this.state.editingChildId }
+            // onEditChild = { this.editChild }
+            // onRemoveChild = { this.removeChild }
             id = { child._id }
             name = { child.name.first + ' ' + child.name.last }
             dob = { child.dob }
@@ -105,9 +105,7 @@ class ChildContainer extends Component {
 
     return(
       <div>
-        <div className="children row" index={this.props.match.params.id} >
-          { this.state.child }
-        </div>
+        { this.state.child }
         <DailyReport />
       </div>
     )

@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import './Child.css';
+import './ChildView.css';
 import {Link} from 'react-router-dom';
 
 const icons = require.context('../icons', true, /\.png$/)

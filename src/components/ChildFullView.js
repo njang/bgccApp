@@ -1,10 +1,10 @@
 import React, {Component} from 'react'
-import './Child.css';
+import './ChildView.css';
 import ChildModel from '../models/Child'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import EditChildForm from '../components/EditChild'
 import ViewChildForm from '../components/ViewChild'
-import { faPhone, faTimesCircle, faEdit } from '@fortawesome/fontawesome-free-solid'
+import { faPhone, faEdit } from '@fortawesome/fontawesome-free-solid'
 
 const icons = require.context('../icons', true, /\.png$/)
 const keys = icons.keys()
@@ -67,16 +67,6 @@ class ChildFullView extends Component {
   }
 
   render(){
-    let displayElementX = (
-      <div>
-        { this.props.name }
-        <br />
-        { this.props.dob } 
-        <br />
-        { this.props.emergencyContact }
-      </div>
-    );
-
     let displayElement = (
       <ViewChildForm 
         name = { this.props.name }
@@ -103,15 +93,14 @@ class ChildFullView extends Component {
     } 
 
     return(
-      <div className='col-10 offset-1 col-sm-12 offset-sm-0 childCardOuter'>
+      // <div className='col-10 offset-1 col-sm-12 offset-sm-0 childCardOuter'>
+      <div className='col-12'>
         <div className='childCardInner row'>
           <div className='col-2'>
             <img className='avatar' alt='avatar' src={ iconsArray[this.props.icon] } />
           </div>
           <div className='nameDisplayFull col-7'>
-
             { displayElement }
-            
           </div>
           <div className='col-1 h2 text-white'>
             <FontAwesomeIcon icon={ faEdit } onClick={ this.editClickedChild } />
