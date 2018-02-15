@@ -51,12 +51,12 @@ class ChildrenContainer extends Component {
           { children }
           {/* Display Add child button after all the children cards are displayed */}
           <div className='col-sm-12 col-md-6 col-lg-4 childCardOuter'>
-           <Link to = { '/children/add' }>
-             <div className='childCardInner text-white'>
-               <FontAwesomeIcon className='avatar' icon={ faPlusCircle } />
-               <span className='nameDisplay'>Add child</span>
-             </div>
-           </Link>
+            <Link to = { '/children/add' }>
+              <div className='childCardInner'>
+                <FontAwesomeIcon className='avatar' icon={ faPlusCircle } />
+                <span className='nameDisplay' >Add child</span>
+              </div>
+            </Link>
           </div>
         </div>
       </div>

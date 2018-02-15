@@ -63,8 +63,8 @@ class EditChildForm extends Component {
 
   render(){
     return (
-      <div className='editChildForm'>
-        <form className='row form-group' onSubmit={ this.onSubmit }>
+      <div className='row editChildForm'>
+        <form className='form-group' onSubmit={ this.onSubmit }>
           <input className='col-8 form-control'
           	name = 'name'
             type = 'text'
