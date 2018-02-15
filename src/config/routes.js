@@ -8,7 +8,7 @@ export default (
 	<Switch>
     <Route exact path='/' component={ ChildrenContainer } />
   	<Route exact path='/children' component={ ChildrenContainer } />
-  	<Route exact path='/children/add' component={ AddChildForm } />
+  	<Route exact path='/child/add' component={ AddChildForm } />
   	<Route path='/child/:id' component={ ChildContainer } />
   </Switch>
 )
