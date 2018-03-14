@@ -5,8 +5,8 @@ class Eat extends Component {
     return (
       <form className='col-md-4 col-sm-10 offset-md-0 offset-sm-1 form-group'>
         <label>{ this.props.meal }</label>
-        <select className='form-control' id={ this.props.id } aria-describedby={ this.props.id }>
-          <option selected disabled hidden>--</option>
+        <select className='form-control' id={ this.props.id } aria-describedby={ this.props.id } defaultValue='--'>
+          <option value='--' disabled hidden>--</option>
           <option value='All'>Ate all</option>
           <option value='Lot'>Ate lots</option>
           <option value='Some'>Ate some</option>

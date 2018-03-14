@@ -8,14 +8,14 @@ class Potty extends Component {
         <form className='form-group'>
           <div className='row'>
             <input className='form-control col-3' type='time' />
-            <select className='form-control col-3' id='type' aria-describedby='type'>
-              <option selected disabled hidden>--</option>
+            <select className='form-control col-3' id='type' aria-describedby='type' defaultValue='--'>
+              <option value='--' disabled hidden>--</option>
               <option value='dry'>Dry</option>
               <option value='wet'>Wet</option>
               <option value='BM'>BM</option>
             </select>
-            <select className='form-control col-3' id='type' aria-describedby='type'>
-              <option selected disabled hidden>--</option>
+            <select className='form-control col-3' id='type' aria-describedby='type' defaultValue='--'>
+              <option value='--' disabled hidden>--</option>
               <option value='tried'>Tried</option>
               <option value='pottied'>Pottied</option>
             </select>

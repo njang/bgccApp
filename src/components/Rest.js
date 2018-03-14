@@ -10,8 +10,8 @@ class Rest extends Component {
         <div className='row'>
           <form className='col-md-12 col-sm-10 offset-sm-1 offset-md-0 form-group'>
             <label>During Rest Time I... </label>
-            <select className='form-control' id='rest' aria-describedby='rest'>
-              <option selected disabled hidden>--</option>
+            <select className='form-control' id='rest' aria-describedby='rest' defaultValue='--'>
+              <option value='--' disabled hidden>--</option>
               <option value='slept'>Slept</option>
               <option value='rest'>Rested</option>
               <option value='active'>Was active</option>
@@ -24,4 +24,4 @@ class Rest extends Component {
   }
 }
 
-export default Rest;           
+export default Rest;
