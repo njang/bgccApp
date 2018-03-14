@@ -6,7 +6,7 @@ class Potty extends Component {
       <div className='col-6'>
         <h2>Potty</h2>
         <form className='form-group'>
-          <div clasName='row'>
+          <div className='row'>
             <input className='form-control col-3' type='time' />
             <select className='form-control col-3' id='type' aria-describedby='type'>
               <option selected disabled hidden>--</option>

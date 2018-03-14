@@ -26,7 +26,7 @@ Simple Web App to record children's daily activities
 * Initial scope: Teacher > Child > Documents
   * Assume one teacher user, who has multiple children in his/her class.
   * Each child has multiple documents associated, such as what they ate, how they played & rested, potty/diaper log and incident reports.
-* Future scope: Parents, Admins
+* Future scope: Add Parents, Admins
   * Expand to multiple teachers for a child.
   * Assign parent users to a child, as well as guardians/relatives.
   * Enable admin users who approves & monitors certain aspects of children's center daily operations (ie. incident reports)

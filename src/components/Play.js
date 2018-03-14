@@ -7,9 +7,9 @@ class Play extends Component {
         <h2>Play</h2>
         <form className='form-group'>
           <label>Favorite Activity</label>
-          <input type='text' class='form-control'/>
+          <input type='text' className='form-control'/>
           <label>Comments</label>
-          <input type='text' class='form-control'/>
+          <input type='text' className='form-control'/>
         </form>
       </div>
     );

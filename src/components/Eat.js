@@ -5,7 +5,7 @@ class Eat extends Component {
     return (
       <form className='col-md-4 col-sm-10 offset-md-0 offset-sm-1 form-group'>
         <label>{ this.props.meal }</label>
-        <select class='form-control' id={ this.props.id } aria-describedby={ this.props.id }>
+        <select className='form-control' id={ this.props.id } aria-describedby={ this.props.id }>
           <option selected disabled hidden>--</option>
           <option value='All'>Ate all</option>
           <option value='Lot'>Ate lots</option>
@@ -17,4 +17,4 @@ class Eat extends Component {
   }
 }
 
-export default Eat;        
+export default Eat;

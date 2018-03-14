@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ChildModel from '../models/Child'
-import EditChildForm from '../components/EditChild'
+// import EditChildForm from '../components/EditChild'
 import ChildFullView from '../components/ChildFullView'
 import { Redirect } from 'react-router-dom';
 import DailyReport from '../components/DailyReport'
@@ -44,8 +44,8 @@ class ChildContainer extends Component {
       // children.find(isUpdatedChild).body = childBody
       self.setState({
         child: '',
-        // children: children, 
-        // editingChildId: null, 
+        // children: children,
+        // editingChildId: null,
         // editing: false,
         inEditMode: false
       })
@@ -54,14 +54,14 @@ class ChildContainer extends Component {
 
   removeChild() {
     ChildModel.delete(this.props.match.params.id).then((res) => {
-      this.setState({ redirectToNewPage: true })      
+      this.setState({ redirectToNewPage: true })
     });
   }
 
   render(){
   	let self = this;
     let child;
-    // let editChildForm; 
+    // let editChildForm;
 
     // Upon successful completion of submit, the page will be redirected to home.
     if (this.state.redirectToNewPage) {
@@ -73,7 +73,7 @@ class ChildContainer extends Component {
       ChildModel.getOne(this.props.match.params.id).then((res) => {
         child = res.data[0]
         let renderedChild = (
-          <ChildFullView             
+          <ChildFullView
             // editingChildId = { this.state.editingChildId }
             // onEditChild = { this.editChild }
             // onRemoveChild = { this.removeChild }
@@ -91,17 +91,17 @@ class ChildContainer extends Component {
       })
     }
 
-    if (this.state.inEditMode === true) {
-      let editChildForm = (
-        <EditChildForm 
-          id = { this.state.childObject._id }
-          name={ this.state.childObject.name.first + ' ' + this.state.childObject.name.last } 
-          dob={ this.state.childObject.dob } 
-          emergencyContact={ this.state.childObject.emergencyContact } 
-          onUpdateChild = { this.updateChild }
-        />
-      )
-    }
+    // if (this.state.inEditMode === true) {
+    //   let editChildForm = (
+    //     <EditChildForm
+    //       id = { this.state.childObject._id }
+    //       name={ this.state.childObject.name.first + ' ' + this.state.childObject.name.last }
+    //       dob={ this.state.childObject.dob }
+    //       emergencyContact={ this.state.childObject.emergencyContact }
+    //       onUpdateChild = { this.updateChild }
+    //     />
+    //   )
+    // }
 
     return(
       <div>
