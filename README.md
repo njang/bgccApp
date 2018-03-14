@@ -63,8 +63,11 @@ Simple Web App to record children's daily activities
     * Documented by
 
 ## Technology Stacks
-* Front end: ([React.js](https://reactjs.org/)) & ([React router](https://www.npmjs.com/package/react-router))
-* Back end: ([Node.js](https://nodejs.org/)), ([Express.js](https://expressjs.com/)), ([Mongoose](http://mongoosejs.com/))
+This is a MERN stack app, using
+* React.js ([link](https://reactjs.org/)) for the front end,
+* Node.js ([link](https://nodejs.org/)),
+* Express.js ([link](https://expressjs.com/)),
+* MongoDB ([link](https://www.mongodb.com/)) for the back end
 
 ## Stretch Goals
 * Capture photos of daily events: children playing, their artwork, etc.
