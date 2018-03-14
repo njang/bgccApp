@@ -69,6 +69,8 @@ This is a MERN stack app, using
 * Express.js ([link](https://expressjs.com/)),
 * MongoDB ([link](https://www.mongodb.com/)) for the back end
 
+The code for the back-end of this app is in a companion repository. ([link](https://github.com/njang/bgccApp-backend))
+
 ## Stretch Goals
 * Capture photos of daily events: children playing, their artwork, etc.
 * Link to meal plan & assess a child's preference & potential area of improvement
