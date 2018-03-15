@@ -93,9 +93,8 @@ class ChildFullView extends Component {
     } 
 
     return(
-      // <div className='col-10 offset-1 col-sm-12 offset-sm-0 childCardOuter'>
       <div className='col-12'>
-        <div className='childCardInner row'>
+        <div className='childCardInner row align-items-center'>
           <div className='col-2'>
             <img className='avatar' alt='avatar' src={ iconsArray[this.props.icon] } />
           </div>
@@ -108,10 +107,12 @@ class ChildFullView extends Component {
           {/*<div className='col-1 h2 text-danger'>
                       <FontAwesomeIcon icon={ faTimesCircle } onClick={this.removeClickedChild} />
                     </div>*/}
-          <a href= { 'tel:' + this.props.emergencyContact } className='col-1 emergencyCallButton'>
+          <div className='col-1 h2 text-white'>
             <FontAwesomeIcon icon={ faPhone } />
-            {/* <p>Emergency</p> */}
-          </a>
+            {/* <p>Emergency</p> 
+          <a href= { 'tel:' + this.props.emergencyContact } className='col-1 emergencyCallButton'>
+          </a>*/}
+          </div>
         </div>
       </div>
     )
