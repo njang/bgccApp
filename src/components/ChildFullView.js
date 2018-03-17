@@ -4,7 +4,7 @@ import ChildModel from '../models/Child'
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import EditChildForm from '../components/EditChild'
 import ViewChildForm from '../components/ViewChild'
-import { faPhone, faEdit } from '@fortawesome/fontawesome-free-solid'
+import { faEdit } from '@fortawesome/fontawesome-free-solid'
 
 const icons = require.context('../icons', true, /\.png$/)
 const keys = icons.keys()
@@ -95,24 +95,24 @@ class ChildFullView extends Component {
     return(
       <div className='col-12'>
         <div className='childCardInner row align-items-center'>
-          <div className='col-2'>
+          <div className='col-4 col-sm-2'>
             <img className='avatar' alt='avatar' src={ iconsArray[this.props.icon] } />
           </div>
-          <div className='nameDisplayFull col-7'>
+          <div className='col-8 col-sm-8 nameDisplayFull'>
             { displayElement }
           </div>
-          <div className='col-1 h2 text-white'>
+          <div className='col-2 col-sm-1 h2'>
             <FontAwesomeIcon icon={ faEdit } onClick={ this.editClickedChild } />
           </div>
           {/*<div className='col-1 h2 text-danger'>
                       <FontAwesomeIcon icon={ faTimesCircle } onClick={this.removeClickedChild} />
                     </div>*/}
-          <div className='col-1 h2 text-white'>
+          {/* <div className='col-2 col-sm-1 h2'>
+            <p>Emergency</p>
+          <a href= { 'tel:' + this.props.emergencyContact } className='col-1'>
             <FontAwesomeIcon icon={ faPhone } />
-            {/* <p>Emergency</p> 
-          <a href= { 'tel:' + this.props.emergencyContact } className='col-1 emergencyCallButton'>
-          </a>*/}
-          </div>
+          </a>
+          </div> */}
         </div>
       </div>
     )

@@ -45,11 +45,12 @@
 }
 
 .emergencyCallButton {
-	font-size: 24px;
 	text-align: center;
 	vertical-align: middle;
 	border-style: solid;
 	border-radius: 64px;
+	width: 64px;
+	height: 64px;
 	background: red;
 	color: white;
 }
