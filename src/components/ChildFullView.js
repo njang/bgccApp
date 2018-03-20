@@ -95,13 +95,13 @@ class ChildFullView extends Component {
     return(
       <div className='col-12'>
         <div className='childCardInner row align-items-center'>
-          <div className='col-4 col-sm-2'>
+          <div className='col-4 col-sm-3'>
             <img className='avatar' alt='avatar' src={ iconsArray[this.props.icon] } />
           </div>
-          <div className='col-8 col-sm-8 nameDisplayFull'>
+          <div className='col-8 col-sm-7 nameDisplayFull'>
             { displayElement }
           </div>
-          <div className='col-2 col-sm-1 h2'>
+          <div className='d-none col-sm-1 h2'>
             <FontAwesomeIcon icon={ faEdit } onClick={ this.editClickedChild } />
           </div>
           {/*<div className='col-1 h2 text-danger'>
