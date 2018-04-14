@@ -10,7 +10,7 @@ class ChildSimpleView extends Component {
   render(){
     return(
       <div className='col-sm-12 col-md-6 col-lg-4 childCardOuter'>
-        <Link to={ '/children/' + this.props.childId } >
+        <Link to={ '/child/' + this.props.childId } >
           <div className='childCardInner'>
             <img className='avatar' alt='avatar' src={ iconsArray[this.props.childIcon] } />
             <span className='nameDisplay' >{ this.props.childName }</span>  
