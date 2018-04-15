@@ -37,5 +37,19 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBGRx0SKUJFX1vJ8U_g6Utuf9UpOcTRF5w",
+        authDomain: "bgcc-app.firebaseapp.com",
+        databaseURL: "https://bgcc-app.firebaseio.com",
+        projectId: "bgcc-app",
+        storageBucket: "bgcc-app.appspot.com",
+        messagingSenderId: "348186191108"
+      };
+      firebase.initializeApp(config);
+    </script>
   </body>
 </html>
